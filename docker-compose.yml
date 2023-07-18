@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+    backend:
+      build:
+        context: ./audiophile_backend
+        dockerfile: Dockerfile
+      command: python manage.py runserver 0.0.0.0:8000
+      volumes:
+        - static:/backend/staticfiles
+      ports:
+        - 8000:8000
+      depends_on:
+        - db
+
+    db:
+      build: postgres:13
+      env_file: ./audiophile_backend/.env
+      environment:
+        - POSTGRES_USER=${DB_USER}
+        - POSTGRES_PASSWORD=${DB_PASSWORD}
+      volumes:
+        - postgres_data:/var/lib/postgres/data
+
+volumes:
+  postgres_data:
