@@ -16,12 +16,14 @@ const Header = () => {
 	};
 
 	return (
-		<header className="flex items-center justify-between px-[2.4rem] py-[3.2rem]">
-			<div className="flex items-center justify-between gap-x-[7.5rem]">
-				<Hamburger
-					isActive={mobileMenuOpen}
-					setIsActive={setIsActiveHandler}
-				/>
+		<header className="flex items-center justify-between px-[2.4rem] py-[3.2rem] sm:p-[4rem] ">
+			<div className="flex items-center justify-between gap-x-[7.5rem] sm:gap-[4.2rem] ">
+				<div className="md:hidden">
+					<Hamburger
+						isActive={mobileMenuOpen}
+						setIsActive={setIsActiveHandler}
+					/>
+				</div>
 				<Image
 					src={Logo}
 					width={143}
@@ -29,6 +31,22 @@ const Header = () => {
 					className="h-[2.5rem] w-[14.3rem]"
 					alt="audiophile logo"
 				/>
+				<nav className="w-[0]  overflow-hidden transition-all duration-1000 md:w-[45rem]">
+					<ul className="flex gap-[3.4rem]">
+						<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+							home
+						</li>
+						<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+							headphones
+						</li>
+						<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+							speakers
+						</li>
+						<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+							earphones
+						</li>
+					</ul>
+				</nav>
 			</div>
 			<Image src={CartIcon} alt="shopping cart" />
 		</header>
