@@ -1,5 +1,10 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Header from './components/Header';
 
 export default function Home() {
-  return <h1>Testing</h1>;
+	return (
+		<div className="h-[50rem]  w-full bg-black">
+			<Header />
+		</div>
+	);
 }

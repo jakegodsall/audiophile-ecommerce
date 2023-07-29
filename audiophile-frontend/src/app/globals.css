@@ -1,9 +1,13 @@
 :root {
-  --color-primary-orange: #d87d4a;
-  --color-secondary-orange: #fbaf85;
-  --color-primary-black: #101010;
-  --color-primary-grey: #fafafa;
-  --color-secondary-grey: #f1f1f1;
+	--color-primary-orange: #d87d4a;
+	--color-secondary-orange: #fbaf85;
+	--color-primary-black: #101010;
+	--color-primary-grey: #fafafa;
+	--color-secondary-grey: #f1f1f1;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 @tailwind base;
