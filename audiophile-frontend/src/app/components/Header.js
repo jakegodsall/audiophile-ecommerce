@@ -33,16 +33,16 @@ const Header = () => {
 
 			<nav className="hidden w-[0] md:flex md:w-[45rem]">
 				<ul className="flex gap-[3.4rem]">
-					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
 						home
 					</li>
-					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
 						headphones
 					</li>
-					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
 						speakers
 					</li>
-					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
 						earphones
 					</li>
 				</ul>
