@@ -7,44 +7,48 @@ import InstaLogo from '../../../public/images/shared/desktop/icon-instagram.svg'
 
 const Footer = () => {
 	return (
-		<footer className="flex flex-col items-center pb-[3.8rem]">
-			<div className="flex max-w-[32.7rem] flex-col items-center gap-[4.8rem]">
+		<footer className="flex flex-col items-center pb-[3.8rem] md:w-full">
+			<div className="flex max-w-[32.7rem] flex-col items-center gap-[4.8rem] sm:max-w-[69rem] sm:items-start md:w-full md:max-w-none">
 				<div className="h-[0.4rem] w-[10rem] bg-primary-orange"></div>
-				<Image
-					src={Logo}
-					alt="logo"
-					width={143}
-					height={25}
-					className="h-[2.5rem] w-[14.3rem]"
-				/>
-				<nav>
-					<ul className="flex flex-col gap-[1.6rem]">
-						<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
-							home
-						</li>
-						<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
-							headphones
-						</li>
-						<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
-							speakers
-						</li>
-						<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
-							earphones
-						</li>
-					</ul>
-				</nav>
-				<p className="text-center text-[1.5rem] leading-[2.5rem] tracking-[.2px] text-white/50">
+				<div className="flex flex-col gap-y-[4.8rem] md:w-full md:flex-row md:justify-between">
+					<Image
+						src={Logo}
+						alt="logo"
+						width={143}
+						height={25}
+						className="h-[2.5rem] w-[14.3rem]"
+					/>
+					<nav>
+						<ul className="flex flex-col gap-[1.6rem] sm:flex-row">
+							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+								home
+							</li>
+							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+								headphones
+							</li>
+							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+								speakers
+							</li>
+							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white hover:text-primary-orange">
+								earphones
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<p className="text-center text-[1.5rem] leading-[2.5rem] tracking-[.2px] text-white/50 sm:text-left md:max-w-[54rem]">
 					Audiophile is an all in one stop to fulfill your audio
 					needs. We're a small team of music lovers and sound
 					specialists who are devoted to helping you get the most out
 					of personal audio. Come and visit our demo facility - we're
 					open 7 days a week.
 				</p>
-				<p className="text-center text-[1.5rem] font-bold tracking-[.2px] text-white/50">
-					Copyright 2021. All Rights Reserved
-				</p>
-				<div>
-					<ul className="flex gap-[2rem]">
+
+				<div className="flex flex-col items-center gap-[4.8rem] sm:w-full sm:flex-row sm:justify-between">
+					<p className="text-center text-[1.5rem] tracking-[.2px] text-white/50 sm:text-left">
+						Copyright 2021. All Rights Reserved
+					</p>
+					<ul className="flex gap-[2rem] md:relative md:top-[-6rem]">
 						<li>
 							<a href="#">
 								<Image
