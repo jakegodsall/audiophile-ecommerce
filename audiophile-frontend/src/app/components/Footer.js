@@ -7,10 +7,10 @@ import InstaLogo from '../../../public/images/shared/desktop/icon-instagram.svg'
 
 const Footer = () => {
 	return (
-		<footer className="flex flex-col items-center bg-black pb-[3.8rem] sm:px-[4rem] md:w-full">
-			<div className="flex max-w-[32.7rem] flex-col items-center gap-[4.8rem] sm:max-w-[69rem] sm:items-start md:w-full md:max-w-none">
+		<footer className="flex flex-col items-center bg-black pb-[3.8rem] sm:px-[4rem] lg:w-full">
+			<div className="flex max-w-[32.7rem] flex-col items-center gap-[4.8rem] sm:max-w-[69rem] sm:items-start lg:w-full lg:max-w-none">
 				<div className="h-[0.4rem] w-[10rem] bg-primary-orange"></div>
-				<div className="flex flex-col gap-y-[4.8rem] md:w-full md:flex-row md:justify-between">
+				<div className="flex flex-col gap-y-[4.8rem] lg:w-full lg:flex-row lg:justify-between">
 					<Image
 						src={Logo}
 						alt="logo"
@@ -36,7 +36,7 @@ const Footer = () => {
 					</nav>
 				</div>
 
-				<p className="text-center text-[1.5rem] leading-[2.5rem] tracking-[.2px] text-white/50 sm:text-left md:max-w-[54rem]">
+				<p className="text-center text-[1.5rem] leading-[2.5rem] tracking-[.2px] text-white/50 sm:text-left lg:max-w-[54rem]">
 					Audiophile is an all in one stop to fulfill your audio
 					needs. We're a small team of music lovers and sound
 					specialists who are devoted to helping you get the most out
@@ -48,7 +48,7 @@ const Footer = () => {
 					<p className="text-center text-[1.5rem] tracking-[.2px] text-white/50 sm:text-left">
 						Copyright 2021. All Rights Reserved
 					</p>
-					<ul className="flex gap-[2rem] md:relative md:top-[-6rem]">
+					<ul className="flex gap-[2rem] lg:relative lg:top-[-6rem]">
 						<li>
 							<a href="#/">
 								<svg
@@ -71,7 +71,7 @@ const Footer = () => {
 								>
 									<path
 										d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"
-										fill-rule="nonzero"
+										fillRule="nonzero"
 										// fill="#FFF"
 									/>
 								</svg>
