@@ -14,7 +14,7 @@ const ProductNavigationItem = ({ product }) => {
 				<p className="cursor-default text-[1.5rem] font-bold uppercase tracking-[0.18rem] lg:text-[1.8rem]">
 					{product.title}
 				</p>
-				<a href={product.link} class="flex items-center gap-4">
+				<a href={product.link} className="flex items-center gap-4">
 					<p className="text-[1.3rem] font-bold uppercase tracking-[0.1rem] opacity-50">
 						shop
 					</p>

@@ -27,7 +27,7 @@ const PRODUCTS = [
 
 const ProductNavigationBar = () => {
 	return (
-		<div className="flex w-full flex-col items-center bg-white px-[2.4rem] py-[4rem]">
+		<div className="flex w-full flex-col items-center bg-white px-[2.4rem] pb-[4rem] pt-[8rem]">
 			<ul className="flex w-full flex-col items-center gap-[6.8rem] sm:max-w-[75rem] sm:flex-row sm:gap-[1rem] lg:max-w-[111rem] lg:gap-[3rem]">
 				{PRODUCTS.map((product) => {
 					return (
