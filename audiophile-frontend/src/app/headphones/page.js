@@ -1,21 +1,21 @@
-import ProductListItem from '../components/ProductListItem';
+import ProductList from '../components/ProductList/ProductList';
 
-const HEADPHONES = [
+const allData = [
 	{
 		id: 1,
 		slug: 'yx1-earphones',
 		name: 'YX1 Wireless Earphones',
 		image: {
-			mobile: './assets/product-yx1-earphones/mobile/image-product.jpg',
-			tablet: './assets/product-yx1-earphones/tablet/image-product.jpg',
-			desktop: './assets/product-yx1-earphones/desktop/image-product.jpg',
+			mobile: '/images/product-yx1-earphones/mobile/image-product.jpg',
+			tablet: '/images/product-yx1-earphones/tablet/image-product.jpg',
+			desktop: '/images/product-yx1-earphones/desktop/image-product.jpg',
 		},
 		category: 'earphones',
 		categoryImage: {
-			mobile: './assets/product-yx1-earphones/mobile/image-category-page-preview.jpg',
-			tablet: './assets/product-yx1-earphones/tablet/image-category-page-preview.jpg',
+			mobile: '/images/product-yx1-earphones/mobile/image-category-page-preview.jpg',
+			tablet: '/images/product-yx1-earphones/tablet/image-category-page-preview.jpg',
 			desktop:
-				'./assets/product-yx1-earphones/desktop/image-category-page-preview.jpg',
+				'/images/product-yx1-earphones/desktop/image-category-page-preview.jpg',
 		},
 		new: true,
 		price: 599,
@@ -47,22 +47,22 @@ const HEADPHONES = [
 		],
 		gallery: {
 			first: {
-				mobile: './assets/product-yx1-earphones/mobile/image-gallery-1.jpg',
-				tablet: './assets/product-yx1-earphones/tablet/image-gallery-1.jpg',
+				mobile: '/images/product-yx1-earphones/mobile/image-gallery-1.jpg',
+				tablet: '/images/product-yx1-earphones/tablet/image-gallery-1.jpg',
 				desktop:
-					'./assets/product-yx1-earphones/desktop/image-gallery-1.jpg',
+					'/images/product-yx1-earphones/desktop/image-gallery-1.jpg',
 			},
 			second: {
-				mobile: './assets/product-yx1-earphones/mobile/image-gallery-2.jpg',
-				tablet: './assets/product-yx1-earphones/tablet/image-gallery-2.jpg',
+				mobile: '/images/product-yx1-earphones/mobile/image-gallery-2.jpg',
+				tablet: '/images/product-yx1-earphones/tablet/image-gallery-2.jpg',
 				desktop:
-					'./assets/product-yx1-earphones/desktop/image-gallery-2.jpg',
+					'/images/product-yx1-earphones/desktop/image-gallery-2.jpg',
 			},
 			third: {
-				mobile: './assets/product-yx1-earphones/mobile/image-gallery-3.jpg',
-				tablet: './assets/product-yx1-earphones/tablet/image-gallery-3.jpg',
+				mobile: '/images/product-yx1-earphones/mobile/image-gallery-3.jpg',
+				tablet: '/images/product-yx1-earphones/tablet/image-gallery-3.jpg',
 				desktop:
-					'./assets/product-yx1-earphones/desktop/image-gallery-3.jpg',
+					'/images/product-yx1-earphones/desktop/image-gallery-3.jpg',
 			},
 		},
 		others: [
@@ -70,29 +70,28 @@ const HEADPHONES = [
 				slug: 'xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
-					mobile: './assets/shared/mobile/image-xx99-mark-one-headphones.jpg',
-					tablet: './assets/shared/tablet/image-xx99-mark-one-headphones.jpg',
+					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx99-mark-one-headphones.jpg',
 					desktop:
-						'./assets/shared/desktop/image-xx99-mark-one-headphones.jpg',
+						'/images/shared/desktop/image-xx99-mark-one-headphones.jpg',
 				},
 			},
 			{
 				slug: 'xx59-headphones',
 				name: 'XX59',
 				image: {
-					mobile: './assets/shared/mobile/image-xx59-headphones.jpg',
-					tablet: './assets/shared/tablet/image-xx59-headphones.jpg',
-					desktop:
-						'./assets/shared/desktop/image-xx59-headphones.jpg',
+					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx59-headphones.jpg',
+					desktop: '/images/shared/desktop/image-xx59-headphones.jpg',
 				},
 			},
 			{
 				slug: 'zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
-					mobile: './assets/shared/mobile/image-zx9-speaker.jpg',
-					tablet: './assets/shared/tablet/image-zx9-speaker.jpg',
-					desktop: './assets/shared/desktop/image-zx9-speaker.jpg',
+					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
+					tablet: '/images/shared/tablet/image-zx9-speaker.jpg',
+					desktop: '/images/shared/desktop/image-zx9-speaker.jpg',
 				},
 			},
 		],
@@ -102,17 +101,17 @@ const HEADPHONES = [
 		slug: 'xx59-headphones',
 		name: 'XX59 Headphones',
 		image: {
-			mobile: './assets/product-xx59-headphones/mobile/image-product.jpg',
-			tablet: './assets/product-xx59-headphones/tablet/image-product.jpg',
+			mobile: '/images/product-xx59-headphones/mobile/image-product.jpg',
+			tablet: '/images/product-xx59-headphones/tablet/image-product.jpg',
 			desktop:
-				'./assets/product-xx59-headphones/desktop/image-product.jpg',
+				'/images/product-xx59-headphones/desktop/image-product.jpg',
 		},
 		category: 'headphones',
 		categoryImage: {
-			mobile: './assets/product-xx59-headphones/mobile/image-category-page-preview.jpg',
-			tablet: './assets/product-xx59-headphones/tablet/image-category-page-preview.jpg',
+			mobile: '/images/product-xx59-headphones/mobile/image-category-page-preview.jpg',
+			tablet: '/images/product-xx59-headphones/tablet/image-category-page-preview.jpg',
 			desktop:
-				'./assets/product-xx59-headphones/desktop/image-category-page-preview.jpg',
+				'/images/product-xx59-headphones/desktop/image-category-page-preview.jpg',
 		},
 		new: false,
 		price: 899,
@@ -140,22 +139,22 @@ const HEADPHONES = [
 		],
 		gallery: {
 			first: {
-				mobile: './assets/product-xx59-headphones/mobile/image-gallery-1.jpg',
-				tablet: './assets/product-xx59-headphones/tablet/image-gallery-1.jpg',
+				mobile: '/images/product-xx59-headphones/mobile/image-gallery-1.jpg',
+				tablet: '/images/product-xx59-headphones/tablet/image-gallery-1.jpg',
 				desktop:
-					'./assets/product-xx59-headphones/desktop/image-gallery-1.jpg',
+					'/images/product-xx59-headphones/desktop/image-gallery-1.jpg',
 			},
 			second: {
-				mobile: './assets/product-xx59-headphones/mobile/image-gallery-2.jpg',
-				tablet: './assets/product-xx59-headphones/tablet/image-gallery-2.jpg',
+				mobile: '/images/product-xx59-headphones/mobile/image-gallery-2.jpg',
+				tablet: '/images/product-xx59-headphones/tablet/image-gallery-2.jpg',
 				desktop:
-					'./assets/product-xx59-headphones/desktop/image-gallery-2.jpg',
+					'/images/product-xx59-headphones/desktop/image-gallery-2.jpg',
 			},
 			third: {
-				mobile: './assets/product-xx59-headphones/mobile/image-gallery-3.jpg',
-				tablet: './assets/product-xx59-headphones/tablet/image-gallery-3.jpg',
+				mobile: '/images/product-xx59-headphones/mobile/image-gallery-3.jpg',
+				tablet: '/images/product-xx59-headphones/tablet/image-gallery-3.jpg',
 				desktop:
-					'./assets/product-xx59-headphones/desktop/image-gallery-3.jpg',
+					'/images/product-xx59-headphones/desktop/image-gallery-3.jpg',
 			},
 		},
 		others: [
@@ -163,29 +162,29 @@ const HEADPHONES = [
 				slug: 'xx99-mark-two-headphones',
 				name: 'XX99 Mark II',
 				image: {
-					mobile: './assets/shared/mobile/image-xx99-mark-two-headphones.jpg',
-					tablet: './assets/shared/tablet/image-xx99-mark-two-headphones.jpg',
+					mobile: '/images/shared/mobile/image-xx99-mark-two-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx99-mark-two-headphones.jpg',
 					desktop:
-						'./assets/shared/desktop/image-xx99-mark-two-headphones.jpg',
+						'/images/shared/desktop/image-xx99-mark-two-headphones.jpg',
 				},
 			},
 			{
 				slug: 'xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
-					mobile: './assets/shared/mobile/image-xx99-mark-one-headphones.jpg',
-					tablet: './assets/shared/tablet/image-xx99-mark-one-headphones.jpg',
+					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx99-mark-one-headphones.jpg',
 					desktop:
-						'./assets/shared/desktop/image-xx99-mark-one-headphones.jpg',
+						'/images/shared/desktop/image-xx99-mark-one-headphones.jpg',
 				},
 			},
 			{
 				slug: 'zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
-					mobile: './assets/shared/mobile/image-zx9-speaker.jpg',
-					tablet: './assets/shared/tablet/image-zx9-speaker.jpg',
-					desktop: './assets/shared/desktop/image-zx9-speaker.jpg',
+					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
+					tablet: '/images/shared/tablet/image-zx9-speaker.jpg',
+					desktop: '/images/shared/desktop/image-zx9-speaker.jpg',
 				},
 			},
 		],
@@ -195,17 +194,17 @@ const HEADPHONES = [
 		slug: 'xx99-mark-one-headphones',
 		name: 'XX99 Mark I Headphones',
 		image: {
-			mobile: './assets/product-xx99-mark-one-headphones/mobile/image-product.jpg',
-			tablet: './assets/product-xx99-mark-one-headphones/tablet/image-product.jpg',
+			mobile: '/images/product-xx99-mark-one-headphones/mobile/image-product.jpg',
+			tablet: '/images/product-xx99-mark-one-headphones/tablet/image-product.jpg',
 			desktop:
-				'./assets/product-xx99-mark-one-headphones/desktop/image-product.jpg',
+				'/images/product-xx99-mark-one-headphones/desktop/image-product.jpg',
 		},
 		category: 'headphones',
 		categoryImage: {
-			mobile: './assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg',
-			tablet: './assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg',
+			mobile: '/images/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg',
+			tablet: '/images/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg',
 			desktop:
-				'./assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg',
+				'/images/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg',
 		},
 		new: false,
 		price: 1750,
@@ -233,22 +232,22 @@ const HEADPHONES = [
 		],
 		gallery: {
 			first: {
-				mobile: './assets/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg',
-				tablet: './assets/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg',
+				mobile: '/images/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg',
+				tablet: '/images/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg',
 				desktop:
-					'./assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg',
+					'/images/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg',
 			},
 			second: {
-				mobile: './assets/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg',
-				tablet: './assets/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg',
+				mobile: '/images/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg',
+				tablet: '/images/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg',
 				desktop:
-					'./assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg',
+					'/images/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg',
 			},
 			third: {
-				mobile: './assets/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg',
-				tablet: './assets/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg',
+				mobile: '/images/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg',
+				tablet: '/images/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg',
 				desktop:
-					'./assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg',
+					'/images/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg',
 			},
 		},
 		others: [
@@ -256,34 +255,323 @@ const HEADPHONES = [
 				slug: 'xx99-mark-two-headphones',
 				name: 'XX99 Mark II',
 				image: {
-					mobile: './assets/shared/mobile/image-xx99-mark-two-headphones.jpg',
-					tablet: './assets/shared/tablet/image-xx99-mark-two-headphones.jpg',
+					mobile: '/images/shared/mobile/image-xx99-mark-two-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx99-mark-two-headphones.jpg',
 					desktop:
-						'./assets/shared/desktop/image-xx99-mark-two-headphones.jpg',
+						'/images/shared/desktop/image-xx99-mark-two-headphones.jpg',
 				},
 			},
 			{
 				slug: 'xx59-headphones',
 				name: 'XX59',
 				image: {
-					mobile: './assets/shared/mobile/image-xx59-headphones.jpg',
-					tablet: './assets/shared/tablet/image-xx59-headphones.jpg',
-					desktop:
-						'./assets/shared/desktop/image-xx59-headphones.jpg',
+					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx59-headphones.jpg',
+					desktop: '/images/shared/desktop/image-xx59-headphones.jpg',
 				},
 			},
 			{
 				slug: 'zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
-					mobile: './assets/shared/mobile/image-zx9-speaker.jpg',
-					tablet: './assets/shared/tablet/image-zx9-speaker.jpg',
-					desktop: './assets/shared/desktop/image-zx9-speaker.jpg',
+					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
+					tablet: '/images/shared/tablet/image-zx9-speaker.jpg',
+					desktop: '/images/shared/desktop/image-zx9-speaker.jpg',
+				},
+			},
+		],
+	},
+	{
+		id: 4,
+		slug: 'xx99-mark-two-headphones',
+		name: 'XX99 Mark II Headphones',
+		image: {
+			mobile: '/images/product-xx99-mark-two-headphones/mobile/image-product.jpg',
+			tablet: '/images/product-xx99-mark-two-headphones/tablet/image-product.jpg',
+			desktop:
+				'/images/product-xx99-mark-two-headphones/desktop/image-product.jpg',
+		},
+		category: 'headphones',
+		categoryImage: {
+			mobile: '/images/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg',
+			tablet: '/images/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg',
+			desktop:
+				'/images/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg',
+		},
+		new: true,
+		price: 2999,
+		description:
+			'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.',
+		features:
+			'Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.\n\nThe advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and a modern design aesthetic.',
+		includes: [
+			{
+				quantity: 1,
+				item: 'Headphone unit',
+			},
+			{
+				quantity: 2,
+				item: 'Replacement earcups',
+			},
+			{
+				quantity: 1,
+				item: 'User manual',
+			},
+			{
+				quantity: 1,
+				item: '3.5mm 5m audio cable',
+			},
+			{
+				quantity: 1,
+				item: 'Travel bag',
+			},
+		],
+		gallery: {
+			first: {
+				mobile: '/images/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg',
+				tablet: '/images/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg',
+				desktop:
+					'/images/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg',
+			},
+			second: {
+				mobile: '/images/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg',
+				tablet: '/images/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg',
+				desktop:
+					'/images/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg',
+			},
+			third: {
+				mobile: '/images/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg',
+				tablet: '/images/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg',
+				desktop:
+					'/images/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg',
+			},
+		},
+		others: [
+			{
+				slug: 'xx99-mark-one-headphones',
+				name: 'XX99 Mark I',
+				image: {
+					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx99-mark-one-headphones.jpg',
+					desktop:
+						'/images/shared/desktop/image-xx99-mark-one-headphones.jpg',
+				},
+			},
+			{
+				slug: 'xx59-headphones',
+				name: 'XX59',
+				image: {
+					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx59-headphones.jpg',
+					desktop: '/images/shared/desktop/image-xx59-headphones.jpg',
+				},
+			},
+			{
+				slug: 'zx9-speaker',
+				name: 'ZX9 Speaker',
+				image: {
+					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
+					tablet: '/images/shared/tablet/image-zx9-speaker.jpg',
+					desktop: '/images/shared/desktop/image-zx9-speaker.jpg',
+				},
+			},
+		],
+	},
+	{
+		id: 5,
+		slug: 'zx7-speaker',
+		name: 'ZX7 Speaker',
+		image: {
+			mobile: '/images/product-zx7-speaker/mobile/image-product.jpg',
+			tablet: '/images/product-zx7-speaker/tablet/image-product.jpg',
+			desktop: '/images/product-zx7-speaker/desktop/image-product.jpg',
+		},
+		category: 'speakers',
+		categoryImage: {
+			mobile: '/images/product-zx7-speaker/mobile/image-category-page-preview.jpg',
+			tablet: '/images/product-zx7-speaker/tablet/image-category-page-preview.jpg',
+			desktop:
+				'/images/product-zx7-speaker/desktop/image-category-page-preview.jpg',
+		},
+		new: false,
+		price: 3500,
+		description:
+			'Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.',
+		features:
+			'Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.',
+		includes: [
+			{
+				quantity: 2,
+				item: 'Speaker unit',
+			},
+			{
+				quantity: 2,
+				item: 'Speaker cloth panel',
+			},
+			{
+				quantity: 1,
+				item: 'User manual',
+			},
+			{
+				quantity: 1,
+				item: '3.5mm 7.5m audio cable',
+			},
+			{
+				quantity: 1,
+				item: '7.5m optical cable',
+			},
+		],
+		gallery: {
+			first: {
+				mobile: '/images/product-zx7-speaker/mobile/image-gallery-1.jpg',
+				tablet: '/images/product-zx7-speaker/tablet/image-gallery-1.jpg',
+				desktop:
+					'/images/product-zx7-speaker/desktop/image-gallery-1.jpg',
+			},
+			second: {
+				mobile: '/images/product-zx7-speaker/mobile/image-gallery-2.jpg',
+				tablet: '/images/product-zx7-speaker/tablet/image-gallery-2.jpg',
+				desktop:
+					'/images/product-zx7-speaker/desktop/image-gallery-2.jpg',
+			},
+			third: {
+				mobile: '/images/product-zx7-speaker/mobile/image-gallery-3.jpg',
+				tablet: '/images/product-zx7-speaker/tablet/image-gallery-3.jpg',
+				desktop:
+					'/images/product-zx7-speaker/desktop/image-gallery-3.jpg',
+			},
+		},
+		others: [
+			{
+				slug: 'zx9-speaker',
+				name: 'ZX9 Speaker',
+				image: {
+					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
+					tablet: '/images/shared/tablet/image-zx9-speaker.jpg',
+					desktop: '/images/shared/desktop/image-zx9-speaker.jpg',
+				},
+			},
+			{
+				slug: 'xx99-mark-one-headphones',
+				name: 'XX99 Mark I',
+				image: {
+					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx99-mark-one-headphones.jpg',
+					desktop:
+						'/images/shared/desktop/image-xx99-mark-one-headphones.jpg',
+				},
+			},
+			{
+				slug: 'xx59-headphones',
+				name: 'XX59',
+				image: {
+					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx59-headphones.jpg',
+					desktop: '/images/shared/desktop/image-xx59-headphones.jpg',
+				},
+			},
+		],
+	},
+	{
+		id: 6,
+		slug: 'zx9-speaker',
+		name: 'ZX9 Speaker',
+		image: {
+			mobile: '/images/product-zx9-speaker/mobile/image-product.jpg',
+			tablet: '/images/product-zx9-speaker/tablet/image-product.jpg',
+			desktop: '/images/product-zx9-speaker/desktop/image-product.jpg',
+		},
+		category: 'speakers',
+		categoryImage: {
+			mobile: '/images/product-zx9-speaker/mobile/image-category-page-preview.jpg',
+			tablet: '/images/product-zx9-speaker/tablet/image-category-page-preview.jpg',
+			desktop:
+				'/images/product-zx9-speaker/desktop/image-category-page-preview.jpg',
+		},
+		new: true,
+		price: 4500,
+		description:
+			'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.',
+		features:
+			'Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m).\n\nDiscover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms.',
+		includes: [
+			{
+				quantity: 2,
+				item: 'Speaker unit',
+			},
+			{
+				quantity: 2,
+				item: 'Speaker cloth panel',
+			},
+			{
+				quantity: 1,
+				item: 'User manual',
+			},
+			{
+				quantity: 1,
+				item: '3.5mm 10m audio cable',
+			},
+			{
+				quantity: 1,
+				item: '10m optical cable',
+			},
+		],
+		gallery: {
+			first: {
+				mobile: '/images/product-zx9-speaker/mobile/image-gallery-1.jpg',
+				tablet: '/images/product-zx9-speaker/tablet/image-gallery-1.jpg',
+				desktop:
+					'/images/product-zx9-speaker/desktop/image-gallery-1.jpg',
+			},
+			second: {
+				mobile: '/images/product-zx9-speaker/mobile/image-gallery-2.jpg',
+				tablet: '/images/product-zx9-speaker/tablet/image-gallery-2.jpg',
+				desktop:
+					'/images/product-zx9-speaker/desktop/image-gallery-2.jpg',
+			},
+			third: {
+				mobile: '/images/product-zx9-speaker/mobile/image-gallery-3.jpg',
+				tablet: '/images/product-zx9-speaker/tablet/image-gallery-3.jpg',
+				desktop:
+					'/images/product-zx9-speaker/desktop/image-gallery-3.jpg',
+			},
+		},
+		others: [
+			{
+				slug: 'zx7-speaker',
+				name: 'ZX7 Speaker',
+				image: {
+					mobile: '/images/shared/mobile/image-zx7-speaker.jpg',
+					tablet: '/images/shared/tablet/image-zx7-speaker.jpg',
+					desktop: '/images/shared/desktop/image-zx7-speaker.jpg',
+				},
+			},
+			{
+				slug: 'xx99-mark-one-headphones',
+				name: 'XX99 Mark I',
+				image: {
+					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx99-mark-one-headphones.jpg',
+					desktop:
+						'/images/shared/desktop/image-xx99-mark-one-headphones.jpg',
+				},
+			},
+			{
+				slug: 'xx59-headphones',
+				name: 'XX59',
+				image: {
+					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
+					tablet: '/images/shared/tablet/image-xx59-headphones.jpg',
+					desktop: '/images/shared/desktop/image-xx59-headphones.jpg',
 				},
 			},
 		],
 	},
 ];
+
+const HEADPHONES = allData.filter(
+	(product) => product.category === 'headphones',
+);
 
 const Headphones = () => {
 	return (
@@ -293,16 +581,8 @@ const Headphones = () => {
 					Headphones
 				</h1>
 			</div>
-			<div>
-				<ul className="flex flex-col gap-[12rem]">
-					{HEADPHONES.map((product) => {
-						return (
-							<li className={product.id}>
-								<ProductListItem product={product} />
-							</li>
-						);
-					})}
-				</ul>
+			<div className="pt-[6.4rem]">
+				<ProductList products={HEADPHONES} />
 			</div>
 		</div>
 	);
