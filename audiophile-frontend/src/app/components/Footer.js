@@ -1,9 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Logo from '../../../public/images/shared/desktop/logo.svg';
-import FacebookLogo from '../../../public/images/shared/desktop/icon-facebook.svg';
-import TwitterLogo from '../../../public/images/shared/desktop/icon-twitter.svg';
-import InstaLogo from '../../../public/images/shared/desktop/icon-instagram.svg';
 
 const Footer = () => {
 	return (
@@ -21,16 +19,16 @@ const Footer = () => {
 					<nav>
 						<ul className="flex flex-col gap-[1.6rem] sm:flex-row">
 							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
-								home
+								<Link href="/home">home</Link>
 							</li>
 							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
-								headphones
+								<Link href="/headphones">headphones</Link>
 							</li>
 							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
-								speakers
+								<Link href="/speakers">speakers</Link>
 							</li>
 							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
-								earphones
+								<Link href="/earphones">earphones</Link>
 							</li>
 						</ul>
 					</nav>
