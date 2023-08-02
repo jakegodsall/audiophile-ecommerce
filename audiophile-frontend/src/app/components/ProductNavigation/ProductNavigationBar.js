@@ -9,19 +9,19 @@ const PRODUCTS = [
 		id: 1,
 		title: 'headphones',
 		image: HeadphoneImage,
-		link: '#/',
+		link: '/headphones',
 	},
 	{
 		id: 2,
 		title: 'speakers',
 		image: SpeakersImage,
-		link: '#/',
+		link: '/speakers',
 	},
 	{
 		id: 3,
 		title: 'earphones',
 		image: EarphonesImage,
-		link: '#/',
+		link: '/earphones',
 	},
 ];
 
