@@ -16,7 +16,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className="flex items-center justify-between border-b-[1px] border-white/10 bg-black px-[2.4rem] py-[3.2rem] sm:mx-[4rem] sm:justify-start sm:py-[4rem] lg:justify-between">
+		<header className="flex items-center justify-between border-b-[1px] border-white/10 bg-black px-[2.4rem] py-[3.2rem] sm:justify-start sm:px-[4rem] sm:py-[4rem] lg:justify-between">
 			<div className="lg:hidden">
 				<Hamburger
 					isActive={mobileMenuOpen}

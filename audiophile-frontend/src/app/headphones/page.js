@@ -576,12 +576,12 @@ const HEADPHONES = allData.filter(
 const Headphones = () => {
 	return (
 		<div>
-			<div className="flex flex-col items-center bg-black py-[3.2rem]">
+			<div className="flex flex-col items-center bg-black py-[3.2rem] ">
 				<h1 className="mx-auto bg-black text-[2.8rem] font-bold uppercase tracking-[.2rem] text-white">
 					Headphones
 				</h1>
 			</div>
-			<div className="pt-[6.4rem]">
+			<div className="pt-[6.4rem] sm:pt-[12rem] lg:pt-[16rem]">
 				<ProductList products={HEADPHONES} />
 			</div>
 		</div>
