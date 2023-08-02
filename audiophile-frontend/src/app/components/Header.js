@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+import Link from 'next/link';
 import Image from 'next/image';
 
 import Logo from '../../../public/images/shared/desktop/logo.svg';
@@ -34,16 +35,16 @@ const Header = () => {
 			<nav className="hidden w-[0] lg:flex lg:w-[45rem]">
 				<ul className="flex gap-[3.4rem]">
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						home
+						<Link href="/">home</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						headphones
+						<Link href="/headphones">headphones</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						speakers
+						<Link href="/speakers">speakers</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						earphones
+						<Link href="/earphones">earphones</Link>
 					</li>
 				</ul>
 			</nav>
