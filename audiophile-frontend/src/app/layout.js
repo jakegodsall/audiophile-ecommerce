@@ -5,6 +5,7 @@ import Header from './components/Header';
 import BringingAudio from './components/BringingAudio';
 import ProductNavigationBar from './components/ProductNavigation/ProductNavigationBar';
 import Footer from './components/Footer';
+import { ProductsProvider } from './context/ProductsContext';
 
 const manrope = Manrope({ subsets: ['latin'] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
 				<div className="flex h-screen w-full flex-col items-center bg-white">
 					<div className="w-full max-w-[144rem]">
 						<Header />
-						{children}
+						<ProductsProvider>{children}</ProductsProvider>
 						<ProductNavigationBar />
 						<BringingAudio />
 						<Footer />
