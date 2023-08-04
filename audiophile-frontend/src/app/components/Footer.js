@@ -19,7 +19,7 @@ const Footer = () => {
 					<nav>
 						<ul className="flex flex-col gap-[1.6rem] sm:flex-row">
 							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
-								<Link href="/home">home</Link>
+								<Link href="/">home</Link>
 							</li>
 							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
 								<Link href="/headphones">headphones</Link>
