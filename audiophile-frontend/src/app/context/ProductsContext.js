@@ -2,8 +2,6 @@
 
 import { createContext, useState } from 'react';
 
-const ProductsContext = createContext();
-
 const PRODUCTS = [
 	{
 		id: 1,
@@ -572,6 +570,8 @@ const PRODUCTS = [
 		],
 	},
 ];
+
+const ProductsContext = createContext();
 
 const ProductsProvider = ({ children }) => {
 	const [products, setProducts] = useState(PRODUCTS);

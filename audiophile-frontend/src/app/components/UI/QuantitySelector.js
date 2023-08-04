@@ -2,9 +2,7 @@
 
 import { useState } from 'react';
 
-const QuantitySelector = () => {
-	const [quantity, setQuantity] = useState(1);
-
+const QuantitySelector = ({ quantity, setQuantity }) => {
 	const decreaseHandler = () => {
 		if (quantity > 0) {
 			setQuantity((prevValue) => (prevValue -= 1));

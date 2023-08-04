@@ -1,5 +1,36 @@
+'use client';
+
+import { useState, useContext } from 'react';
+
+import QuantitySelector from './UI/QuantitySelector';
+import { CartContext } from '../context/CartContext';
+
 const ProductDetail = ({ product }) => {
-	console.log(product);
+	const { cart, setCart } = useContext(CartContext);
+	const [quantity, setQuantity] = useState(1);
+
+	const quantityHandler = (quantity) => {
+		setQuantity(quantity);
+	};
+
+	const addToCartHandler = () => {
+		const productCart = {
+			productId: product.id,
+			quantity: quantity,
+		};
+
+		setCart((prevState) => {
+			const item = prevState.find((el) => el.productId === product.id);
+			if (item) {
+				item.quantity = quantity;
+				return prevState;
+			} else {
+				return [...prevState, productCart];
+			}
+		});
+
+		console.log(cart);
+	};
 
 	return (
 		<div className="flex flex-col gap-[8.8rem] px-[2.4rem]">
@@ -34,6 +65,19 @@ const ProductDetail = ({ product }) => {
 					<p className="text-[1.8rem] font-bold uppercase tracking-[0.1286rem]">
 						$ {product.price}
 					</p>
+					<div className="flex items-center gap-[1.6rem]">
+						<QuantitySelector
+							quantity={quantity}
+							setQuantity={quantityHandler}
+						/>
+						<button
+							className="bg-primary-orange px-[3rem] py-[1.5rem] text-[1.3rem] font-bold uppercase tracking-[0.1rem] text-white"
+							onClick={addToCartHandler}
+							type="button"
+						>
+							Add to cart
+						</button>
+					</div>
 				</div>
 			</div>
 			<div className="flex flex-col gap-[2.4rem]">
