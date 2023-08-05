@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 
 import QuantitySelector from './UI/QuantitySelector';
 import { CartContext } from '../context/CartContext';
+import RecommendationSection from './ProductRecommendation/RecommendationSection';
 
 const ProductDetail = ({ product }) => {
 	const router = useRouter();
@@ -178,9 +179,7 @@ const ProductDetail = ({ product }) => {
 						</picture>
 					</div>
 					<div>
-						<p className="text-center text-[2.4rem] font-bold uppercase tracking-[0.086rem]">
-							You may also like
-						</p>
+						<RecommendationSection others={product.others} />
 					</div>
 				</div>
 			</div>
