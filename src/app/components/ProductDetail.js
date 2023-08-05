@@ -167,6 +167,11 @@ const ProductDetail = ({ product }) => {
 					/>
 				</picture>
 			</div>
+			<div>
+				<p className="text-center text-[2.4rem] font-bold uppercase tracking-[0.086rem]">
+					You may also like
+				</p>
+			</div>
 		</div>
 	);
 };
