@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useContext } from 'react';
+import { useRouter } from 'next/navigation';
 
 import QuantitySelector from './UI/QuantitySelector';
 import { CartContext } from '../context/CartContext';
 
 const ProductDetail = ({ product }) => {
+	const router = useRouter();
 	const { cart, setCart } = useContext(CartContext);
 	const [quantity, setQuantity] = useState(1);
 
@@ -22,19 +24,27 @@ const ProductDetail = ({ product }) => {
 		setCart((prevState) => {
 			const item = prevState.find((el) => el.productId === product.id);
 			if (item) {
-				item.quantity = quantity;
+				item.quantity += quantity;
 				return prevState;
 			} else {
 				return [...prevState, productCart];
 			}
 		});
+	};
 
-		console.log(cart);
+	const goBackHandler = () => {
+		router.back();
 	};
 
 	return (
 		<div className="flex flex-col gap-[8.8rem] px-[2.4rem]">
-			<div>
+			<div className="pt-[1.6rem]">
+				<p
+					className="pb-[2.4rem] text-[1.5rem] font-medium capitalize text-black/50"
+					onClick={goBackHandler}
+				>
+					Go back
+				</p>
 				<picture>
 					<source
 						media={'(min-width: 1024px)'}
