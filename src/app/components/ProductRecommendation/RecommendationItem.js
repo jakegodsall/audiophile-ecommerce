@@ -4,7 +4,7 @@ const RecommendationItem = ({ product }) => {
 	const router = useRouter();
 
 	return (
-		<div className="flex flex-col items-center gap-[3.2rem]">
+		<div className="flex flex-col items-center gap-y-[3.2rem]">
 			<picture>
 				<source
 					media="(min-width: 1024px)"
