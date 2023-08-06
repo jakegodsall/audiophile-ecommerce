@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { ProductsContext } from '@/app/context/ProductsContext';
 import ProductDetail from '@/app/components/ProductDetail';
 
-const HeadphoneItem = () => {
+const EarphoneItem = () => {
 	const pathName = usePathname();
 	const { products } = useContext(ProductsContext);
 
@@ -14,7 +14,7 @@ const HeadphoneItem = () => {
 
 	const currentProduct = products.find(
 		(product) =>
-			product.slug === productSlug && product.category === 'headphones',
+			product.slug === productSlug && product.category === 'earphones',
 	);
 
 	console.log(currentProduct);
@@ -22,4 +22,4 @@ const HeadphoneItem = () => {
 	return <ProductDetail product={currentProduct} />;
 };
 
-export default HeadphoneItem;
+export default EarphoneItem;

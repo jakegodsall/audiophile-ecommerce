@@ -69,7 +69,7 @@ const PRODUCTS = [
 		},
 		others: [
 			{
-				slug: 'xx99-mark-one-headphones',
+				slug: 'headphones/xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -79,7 +79,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'xx59-headphones',
+				slug: 'headphones/xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
@@ -88,7 +88,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'zx9-speaker',
+				slug: 'speakers/zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -161,7 +161,7 @@ const PRODUCTS = [
 		},
 		others: [
 			{
-				slug: 'xx99-mark-two-headphones',
+				slug: 'headphones/xx99-mark-two-headphones',
 				name: 'XX99 Mark II',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-two-headphones.jpg',
@@ -171,7 +171,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'xx99-mark-one-headphones',
+				slug: 'headphones/xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -181,7 +181,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'zx9-speaker',
+				slug: 'speakers/zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -254,7 +254,7 @@ const PRODUCTS = [
 		},
 		others: [
 			{
-				slug: 'xx99-mark-two-headphones',
+				slug: 'headphones/xx99-mark-two-headphones',
 				name: 'XX99 Mark II',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-two-headphones.jpg',
@@ -264,7 +264,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'xx59-headphones',
+				slug: 'headphones/xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
@@ -273,7 +273,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'zx9-speaker',
+				slug: 'speakers/zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -350,7 +350,7 @@ const PRODUCTS = [
 		},
 		others: [
 			{
-				slug: 'xx99-mark-one-headphones',
+				slug: 'headphones/xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -360,7 +360,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'xx59-headphones',
+				slug: 'headphones/xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
@@ -369,7 +369,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'zx9-speaker',
+				slug: 'speakers/zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -454,7 +454,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'xx99-mark-one-headphones',
+				slug: 'headphones/xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -464,7 +464,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'xx59-headphones',
+				slug: 'headphones/xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
@@ -540,7 +540,7 @@ const PRODUCTS = [
 		},
 		others: [
 			{
-				slug: 'zx7-speaker',
+				slug: 'speakers/zx7-speaker',
 				name: 'ZX7 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx7-speaker.jpg',
@@ -549,7 +549,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'xx99-mark-one-headphones',
+				slug: 'headphones/xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -559,7 +559,7 @@ const PRODUCTS = [
 				},
 			},
 			{
-				slug: 'xx59-headphones',
+				slug: 'headphones/xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',

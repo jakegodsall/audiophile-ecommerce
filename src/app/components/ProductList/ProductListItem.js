@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 const ProductListItem = ({ product, ltrKey }) => {
-	console.log(product.categoryImage.desktop);
 	return (
 		<div
 			className={
@@ -42,7 +41,7 @@ const ProductListItem = ({ product, ltrKey }) => {
 					{product.description}
 				</p>
 				<Link
-					href={`headphones/${product.slug}`}
+					href={`${product.category}/${product.slug}`}
 					className="mt-[1.2rem] w-auto bg-primary-orange px-[3rem] py-[1.5rem] text-[1.3rem] font-bold uppercase tracking-[0.1rem] text-white"
 				>
 					See Product

@@ -15,7 +15,7 @@ const Speakers = () => {
 		<div>
 			<div className="flex flex-col items-center bg-black py-[3.2rem] ">
 				<h1 className="mx-auto bg-black text-[2.8rem] font-bold uppercase tracking-[.2rem] text-white">
-					Headphones
+					Speakers
 				</h1>
 			</div>
 			<div className="pt-[6.4rem] sm:pt-[12rem] lg:pt-[16rem]">
