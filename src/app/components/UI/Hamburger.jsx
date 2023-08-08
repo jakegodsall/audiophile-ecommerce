@@ -1,7 +1,7 @@
 const Hamburger = ({ isActive, setIsActive }) => {
 	return (
 		<div
-			className="flex h-[1.5rem] w-[1.6rem] flex-col justify-between"
+			className="flex h-[1.5rem] w-[1.6rem] cursor-pointer flex-col justify-between"
 			onClick={setIsActive}
 		>
 			<div

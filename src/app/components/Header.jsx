@@ -8,9 +8,14 @@ import Image from 'next/image';
 import Logo from '../../../public/images/shared/desktop/logo.svg';
 import CartIcon from '../../../public/images/shared/desktop/icon-cart.svg';
 import Hamburger from './UI/Hamburger';
+import MobileMenu from './MobileMenu/MobileMenu';
 
 const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+	const closeMenuFromModal = () => {
+		setMobileMenuOpen((prevState) => !prevState);
+	};
 
 	const setIsActiveHandler = () => {
 		setMobileMenuOpen((prevState) => !prevState);
@@ -53,6 +58,7 @@ const Header = () => {
 				alt="shopping cart"
 				className="cursor-pointer sm:ml-auto lg:ml-0"
 			/>
+			{mobileMenuOpen && <MobileMenu closeMenu={closeMenuFromModal} />}
 		</header>
 	);
 };

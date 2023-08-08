@@ -18,9 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={manrope.className}>
-				<div className="flex h-screen w-full flex-col items-center bg-white">
-					<div className="w-full max-w-[144rem]">
+			<body className={manrope.className + 'w-full'}>
+				<div className="relative flex w-full flex-col items-center bg-white">
+					<div className=" w-full max-w-[144rem]">
 						<Header />
 						<ProductsProvider>
 							<CartProvider>{children}</CartProvider>
