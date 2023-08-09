@@ -8,12 +8,9 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'hero-mobile':
-					'url("/public/images/home/mobile/image-earyphones-yx1.jpg")',
-				'hero-tablet':
-					'url("/images/home/tablet/image-earyphones-yx1.jpg")',
-				'hero-desktop':
-					'url("/images/home/desktop/image-earyphones-yx1.jpg")',
+				'hero-mobile': 'url("/images/home/mobile/image-hero.jpg")',
+				'hero-tablet': 'url("/images/home/mobile/image-hero.jpg")',
+				'hero-desktop': 'url("/images/home/desktop/image-hero.jpg")',
 			},
 			colors: {
 				'primary-orange': 'var(--color-primary-orange)',
