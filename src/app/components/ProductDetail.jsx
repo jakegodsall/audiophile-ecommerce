@@ -41,7 +41,7 @@ const ProductDetail = ({ product }) => {
 		<div className="flex flex-col items-center">
 			<div className="flex max-w-[45rem] flex-col items-center px-[2.4rem] sm:max-w-[75rem] lg:max-w-[110rem]">
 				<p
-					className="mb-[2.4rem] mt-[1.6rem] self-start text-[1.5rem] font-medium capitalize text-black/50 sm:mt-[3.3rem] lg:mb-[5.6rem] lg:mt-[7.9rem]"
+					className="mb-[2.4rem] mt-[1.6rem] cursor-pointer self-start text-[1.5rem] font-medium capitalize text-black/50 sm:mt-[3.3rem] lg:mb-[5.6rem] lg:mt-[7.9rem]"
 					onClick={goBackHandler}
 				>
 					Go back

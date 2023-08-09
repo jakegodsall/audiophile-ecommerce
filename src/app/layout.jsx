@@ -25,7 +25,6 @@ export default function RootLayout({ children }) {
 						<ProductsProvider>
 							<CartProvider>{children}</CartProvider>
 						</ProductsProvider>
-						<ProductNavigationBar />
 						<BringingAudio />
 						<Footer />
 					</div>
