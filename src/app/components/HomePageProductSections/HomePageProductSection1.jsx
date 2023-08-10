@@ -7,20 +7,20 @@ const HomePageProductSection1 = () => {
 				<picture>
 					<source
 						media="(min-width: 1024px)"
-						src="/images/home/desktop/image-speaker-zx9.png"
+						srcSet="/images/home/desktop/image-speaker-zx9.png"
 					></source>
 					<source
 						media="(min-width: 640px)"
-						src="/images/home/tablet/image-speaker-zx9.png"
+						srcSet="/images/home/tablet/image-speaker-zx9.png"
 					></source>
 					<img
 						src="/images/home/mobile/image-speaker-zx9.png"
-						alt="ZX0 Speaker"
-						className="mb-[3.2rem] mt-[5.5rem] max-w-[17.2rem] lg:relative lg:bottom-[-4rem] lg:mx-[11.8rem] lg:max-w-[410rem]"
+						alt="ZX9 Speaker"
+						className="mb-[3.2rem] mt-[5.5rem] max-w-[17.2rem] lg:relative lg:bottom-[-4rem] lg:mx-[11.8rem] lg:max-w-[41rem]"
 					/>
 				</picture>
 			</div>
-			<div className="flex max-w-[28rem] flex-col items-center lg:items-start">
+			<div className="flex max-w-[28rem] flex-col items-center lg:mx-[5rem] lg:items-start">
 				<p className="mb-[2.4rem] max-w-[18rem] text-center text-[3.6rem] uppercase leading-[4rem] tracking-[0.129rem] text-white sm:max-w-[26rem] sm:text-[5.6rem] sm:leading-[5.6rem] lg:text-left">
 					ZX9 Speaker
 				</p>

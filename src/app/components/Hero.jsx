@@ -6,7 +6,7 @@ const Hero = () => {
 	const router = useRouter();
 
 	return (
-		<div className="bg- flex flex-col items-center bg-black bg-hero-mobile bg-cover bg-center bg-repeat-x text-center sm:bg-hero-tablet lg:items-start lg:bg-hero-desktop">
+		<div className="bg- flex w-full flex-col items-center bg-black bg-hero-mobile bg-cover bg-center bg-repeat-x text-center sm:bg-hero-tablet lg:items-start lg:bg-hero-desktop">
 			<div className="mt-[10.8rem] flex flex-col items-center p-[3rem] sm:mt-[12.8rem] sm:p-0 lg:ml-[16.5rem] lg:items-start">
 				<p className="mb-[1.6rem] text-[1.4rem] uppercase tracking-[1rem] text-white/50 sm:mb-[2.4rem]">
 					new product
