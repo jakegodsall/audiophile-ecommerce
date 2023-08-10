@@ -8,7 +8,7 @@ export default function Home() {
 		<div className="flex flex-col items-center">
 			<Hero />
 			<ProductNavigationBar />
-			<div className="mx-[2.4rem] mt-[9rem] flex w-full flex-col items-center gap-[2.4rem] sm:mt-[6rem] lg:mx-0 lg:max-w-[111rem]">
+			<div className="mx-[2.4rem] mt-[9rem] flex w-full flex-col items-center gap-[2.4rem] sm:mt-[6rem] lg:mx-0 lg:max-w-[111rem] lg:gap-[4.8rem]">
 				<HomePageProductSection1 />
 				<HomePageProductSection2 />
 			</div>
