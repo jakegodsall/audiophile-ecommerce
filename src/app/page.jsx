@@ -6,8 +6,10 @@ export default function Home() {
 	return (
 		<div>
 			<Hero />
-			<HomePageProductSection1 />
 			<ProductNavigationBar />
+			<div className="mx-[2.4rem] mt-[9rem] flex flex-col items-center sm:mt-[6rem] lg:mx-[3.9rem]">
+				<HomePageProductSection1 />
+			</div>
 		</div>
 	);
 }
