@@ -6,7 +6,7 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
 
 ### Screenshot
 
-<img src="./final-screenshot.png" />
+<img src="./final-screenshot.png" width="300px" />
 
 ### Links
 
