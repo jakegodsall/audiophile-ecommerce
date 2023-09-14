@@ -19,7 +19,7 @@ const CheckoutForm = () => {
 			country: '',
 		},
 		payment: {
-			method: 'e-cash',
+			method: 'e-money',
 		},
 	});
 
@@ -48,9 +48,14 @@ const CheckoutForm = () => {
 		setFormData((prevState) => {
 			return {
 				...prevState,
-				newSection,
+				payment: {
+					...prevState.payment,
+					method: radioValue,
+				},
 			};
 		});
+
+		console.log(formData);
 	};
 
 	const onSubmitHandler = (e) => {
@@ -69,7 +74,10 @@ const CheckoutForm = () => {
 				</h1>
 				{/* <BillingDetails onChangeHandler={onChangeHandler} />
 				<ShippingDetails onChangeHandler={onChangeHandler} /> */}
-				<PaymentDetails onRadioHandler={onRadioHandler} />
+				<PaymentDetails
+					onRadioHandler={onRadioHandler}
+					radioValue={formData.payment.method}
+				/>
 			</div>
 			<div>
 				<button type="submit">Continue & Pay</button>

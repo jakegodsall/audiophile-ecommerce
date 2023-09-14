@@ -3,42 +3,31 @@
 import React, { useState } from 'react';
 import RadioControl from '../formControls/RadioControl';
 
-const PaymentDetails = ({ onRadioHandler }) => {
-	const [isEMoney, setIsEMoney] = useState(true);
-
-	const onChangeHandler = () => {
-		setIsEMoney((prevState) => {
-			const newState = !prevState;
-
-			if (newState) {
-				onRadioHandler('e-money');
-			} else {
-				onRadioHandler('cash-on-delivery');
-			}
-
-			return newState;
-		});
+const PaymentDetails = ({ onRadioHandler, radioValue }) => {
+	console.log(radioValue);
+	const handleOptionChange = (e) => {
+		onRadioHandler(e.target.value);
 	};
 
 	return (
-		<fieldset>
-			<legend className="text-[1.3rem] font-medium uppercase tracking-[0.1rem] text-primary-orange">
+		<div>
+			<h3 className="text-[1.3rem] font-medium uppercase tracking-[0.1rem] text-primary-orange">
 				Payment Details
-			</legend>
+			</h3>
 			<div>
 				<legend>Payment Method</legend>
 				<RadioControl
 					value="e-money"
-					selected={isEMoney}
-					onChangeHandler={onChangeHandler}
+					selected={radioValue === 'e-money'}
+					handleOptionChange={handleOptionChange}
 				/>
 				<RadioControl
 					value="cash-on-delivery"
-					selected={!isEMoney}
-					onChangeHandler={onChangeHandler}
+					selected={radioValue === 'cash-on-delivery'}
+					handleOptionChange={handleOptionChange}
 				/>
 			</div>
-		</fieldset>
+		</div>
 	);
 };
 

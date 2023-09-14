@@ -1,10 +1,10 @@
 import React from 'react';
 
-const RadioControl = ({ selected, value, onChangeHandler, onRadioHandler }) => {
+const RadioControl = ({ selected, value, handleOptionChange }) => {
 	return (
 		<label
 			className="flex w-full gap-[1.6rem] rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[1.6rem] py-[1.8rem] text-[1.4rem] font-bold tracking-[-0.025rem]"
-			onChange={onChangeHandler}
+			onClick={handleOptionChange}
 		>
 			<input
 				type="radio"
