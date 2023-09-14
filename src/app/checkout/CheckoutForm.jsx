@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import BillingDetails from './formSections/BillingDetails';
 import ShippingDetails from './formSections/ShippingDetails';
 import PaymentDetails from './formSections/PaymentDetails';
+import EMoneyDetails from './formSections/EMoneyDetails';
 
 const CheckoutForm = () => {
 	const [formData, setFormData] = useState({
@@ -72,12 +73,13 @@ const CheckoutForm = () => {
 				<h1 className="mb-[3.2rem] text-[2.8rem] font-bold uppercase tracking-[0.1rem]">
 					Checkout
 				</h1>
-				{/* <BillingDetails onChangeHandler={onChangeHandler} />
-				<ShippingDetails onChangeHandler={onChangeHandler} /> */}
+				<BillingDetails onChangeHandler={onChangeHandler} />
+				<ShippingDetails onChangeHandler={onChangeHandler} />
 				<PaymentDetails
 					onRadioHandler={onRadioHandler}
 					radioValue={formData.payment.method}
 				/>
+				{formData.payment.method == 'e-money' && <EMoneyDetails />}
 			</div>
 			<div>
 				<button type="submit">Continue & Pay</button>
