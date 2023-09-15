@@ -55,8 +55,6 @@ const CheckoutForm = () => {
 				},
 			};
 		});
-
-		console.log(formData);
 	};
 
 	const onSubmitHandler = (e) => {
@@ -67,7 +65,7 @@ const CheckoutForm = () => {
 	return (
 		<form
 			onSubmit={onSubmitHandler}
-			className="flex w-full flex-col items-center bg-[#FAFAFA] px-[2.4rem]"
+			className="flex w-full flex-col items-center rounded-[0.8rem]"
 		>
 			<div className="w-full bg-white p-[2.4rem]">
 				<h1 className="mb-[3.2rem] text-[2.8rem] font-bold uppercase tracking-[0.1rem]">
