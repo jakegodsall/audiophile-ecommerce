@@ -21,9 +21,11 @@ export default function RootLayout({ children }) {
 			<body className={manrope.className + 'w-full'}>
 				<div className="relative flex w-full flex-col items-center bg-white">
 					<div className=" w-full max-w-[144rem]">
-						<Header />
 						<ProductsProvider>
-							<CartProvider>{children}</CartProvider>
+							<CartProvider>
+								<Header />
+								{children}
+							</CartProvider>
 						</ProductsProvider>
 						<BringingAudio />
 						<Footer />
