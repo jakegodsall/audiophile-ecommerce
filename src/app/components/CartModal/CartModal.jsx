@@ -4,39 +4,35 @@ import { useState, useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import Image from 'next/image';
 import { ProductsContext } from '@/app/context/ProductsContext';
-import QuantitySelector from '../UI/QuantitySelector';
 import Link from 'next/link';
+import CartItem from './CartItem';
 
 const CartModal = ({ handleCartModal }) => {
 	const { cart, setCart } = useContext(CartContext);
 	const { products } = useContext(ProductsContext);
 
-	console.log(products);
+	const getSelectedProducts = (cart) => {
+		const selectedProducts = [];
+		cart.map((itemInCart) => {
+			// find associated value in products object
+			const product = products.find(
+				(product) => product.id === itemInCart.productId,
+			);
+			// build object
+			const item = {
+				id: product.id,
+				name: product.name,
+				price: product.price,
+				image: product.image.mobile,
+				quantity: itemInCart.quantity,
+			};
 
-	console.log('from cart', cart);
+			selectedProducts.push(item);
+		});
+		return selectedProducts;
+	};
 
-	const dummyCart = [
-		{
-			productId: 3,
-			quantity: 6,
-		},
-	];
-
-	const product = products.find(
-		(product) => product.id === dummyCart[0].productId,
-	);
-
-	const reducedProduct = [
-		{
-			id: product.id,
-			name: product.name,
-			price: product.price,
-			image: product.image.mobile,
-			quantity: dummyCart[0].quantity,
-		},
-	];
-
-	console.log(reducedProduct);
+	const productArray = getSelectedProducts(cart);
 
 	return (
 		<div
@@ -45,31 +41,13 @@ const CartModal = ({ handleCartModal }) => {
 		>
 			<div className="relative mx-[2.4rem] mt-[2.4rem] flex flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem]">
 				<h3 className=" mb-[3.2rem] self-start text-[1.8rem] font-bold uppercase tracking-[0.12rem]">
-					Cart {`(${reducedProduct.length})`}
+					Cart {`(${productArray.length})`}
 				</h3>
 				<ul className="mb-[3.2rem] flex flex-col">
-					{reducedProduct.map((product) => {
+					{productArray.map((product) => {
 						return (
 							<li key={product.id}>
-								<div className="flex items-center">
-									<Image
-										src={product.image}
-										width={64}
-										height={64}
-										className="mr-[1.6rem]"
-									/>
-									<div>
-										<p className="text-[1.5rem] font-bold leading-[2.5rem]">
-											{product.name}
-										</p>
-										<p className="text-[1.4rem] font-bold text-black/50">
-											${product.price}
-										</p>
-									</div>
-									<QuantitySelector
-										quantity={product.quantity}
-									/>
-								</div>
+								<CartItem product={product} />
 							</li>
 						);
 					})}
