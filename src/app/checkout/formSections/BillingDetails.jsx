@@ -2,14 +2,14 @@ import React from 'react';
 
 const BillingDetails = ({ onChangeHandler }) => {
 	return (
-		<fieldset>
+		<fieldset className="mb-[3.2rem]">
 			<legend className="mb-[1.6rem] text-[1.3rem] font-medium uppercase tracking-[0.1rem] text-primary-orange">
 				Billing Details
 			</legend>
 			<div className="mb-[2.4rem] flex flex-col">
 				<label
 					htmlFor="name"
-					className="mb-[1rem] text-[1.2rem] tracking-[-0.02rem]"
+					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"
 				>
 					Name
 				</label>
@@ -25,7 +25,7 @@ const BillingDetails = ({ onChangeHandler }) => {
 			<div className="mb-[2.4rem] flex flex-col">
 				<label
 					htmlFor="email"
-					className="mb-[1rem] text-[1.2rem] tracking-[-0.02rem]"
+					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"
 				>
 					Email Address
 				</label>
@@ -41,7 +41,7 @@ const BillingDetails = ({ onChangeHandler }) => {
 			<div className="mb-[2.4rem] flex flex-col">
 				<label
 					htmlFor="phone"
-					className="mb-[1rem] text-[1.2rem] tracking-[-0.02rem]"
+					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"
 				>
 					Phone Number
 				</label>
