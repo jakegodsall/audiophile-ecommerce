@@ -26,13 +26,16 @@ const CartModal = ({ handleCartModal }) => {
 				image: product.image.mobile,
 				quantity: itemInCart.quantity,
 			};
-
+			// push to the array
 			selectedProducts.push(item);
 		});
 		return selectedProducts;
 	};
 
 	const productArray = getSelectedProducts(cart);
+	const totalPrice = productArray.reduce((accumulator, currentItem) => {
+		return (accumulator = currentItem.price * currentItem.quantity);
+	}, 0);
 
 	return (
 		<div
@@ -56,7 +59,9 @@ const CartModal = ({ handleCartModal }) => {
 					<p className="text-[1.5rem] font-medium uppercase text-black/50">
 						total
 					</p>
-					<p className="text-[1.8rem] font-bold uppercase">$ 5,396</p>
+					<p className="text-[1.8rem] font-bold uppercase">
+						$ {totalPrice !== 0 ? totalPrice : 0}
+					</p>
 				</div>
 				<Link
 					href="/checkout"

@@ -7,6 +7,7 @@ const CartItem = ({ product }) => {
 		<div className="flex items-center">
 			<Image
 				src={product.image}
+				alt={product.name}
 				width={64}
 				height={64}
 				className="mr-[1.6rem]"
