@@ -12,10 +12,37 @@ const CartModal = ({ handleCartModal }) => {
 	const { cart, setCart } = useContext(CartContext);
 	const { products } = useContext(ProductsContext);
 
-	const productArray = getSelectedProducts(cart, products);
+	// const productArray = getSelectedProducts(cart, products);
+
+	const productArray = [
+		{
+			id: 2,
+			name: 'XX59',
+			price: 899,
+			image: '/images/product-xx59-headphones/mobile/image-product.jpg',
+			quantity: 4,
+		},
+		{
+			id: 4,
+			name: 'XX99',
+			price: 2999,
+			image: '/images/product-xx99-mark-two-headphones/mobile/image-product.jpg',
+			quantity: 3,
+		},
+		{
+			id: 6,
+			name: 'ZX9',
+			price: 4500,
+			image: '/images/product-zx9-speaker/mobile/image-product.jpg',
+			quantity: 5,
+		},
+	];
+
 	const totalPrice = productArray.reduce((accumulator, currentItem) => {
 		return (accumulator = currentItem.price * currentItem.quantity);
 	}, 0);
+
+	console.log(productArray);
 
 	return (
 		<div
@@ -26,7 +53,7 @@ const CartModal = ({ handleCartModal }) => {
 				<h3 className=" mb-[3.2rem] self-start text-[1.8rem] font-bold uppercase tracking-[0.12rem]">
 					Cart {`(${productArray.length})`}
 				</h3>
-				<ul className="mb-[3.2rem] flex flex-col">
+				<ul className="mb-[3.2rem] flex w-full flex-col gap-y-[2.4rem]">
 					{productArray.map((product) => {
 						return (
 							<li key={product.id}>

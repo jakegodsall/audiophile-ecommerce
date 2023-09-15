@@ -16,7 +16,7 @@ const getSelectedProducts = (cart, products) => {
 		// build object
 		const item = {
 			id: product.id,
-			name: product.name,
+			name: product.name.split(' ')[0],
 			price: product.price,
 			image: product.image.mobile,
 			quantity: itemInCart.quantity,
