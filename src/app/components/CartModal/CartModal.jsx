@@ -6,33 +6,13 @@ import Image from 'next/image';
 import { ProductsContext } from '@/app/context/ProductsContext';
 import Link from 'next/link';
 import CartItem from './CartItem';
+import { getSelectedProducts } from '@/app/utilities/dataTransform';
 
 const CartModal = ({ handleCartModal }) => {
 	const { cart, setCart } = useContext(CartContext);
 	const { products } = useContext(ProductsContext);
 
-	const getSelectedProducts = (cart) => {
-		const selectedProducts = [];
-		cart.map((itemInCart) => {
-			// find associated value in products object
-			const product = products.find(
-				(product) => product.id === itemInCart.productId,
-			);
-			// build object
-			const item = {
-				id: product.id,
-				name: product.name,
-				price: product.price,
-				image: product.image.mobile,
-				quantity: itemInCart.quantity,
-			};
-			// push to the array
-			selectedProducts.push(item);
-		});
-		return selectedProducts;
-	};
-
-	const productArray = getSelectedProducts(cart);
+	const productArray = getSelectedProducts(cart, products);
 	const totalPrice = productArray.reduce((accumulator, currentItem) => {
 		return (accumulator = currentItem.price * currentItem.quantity);
 	}, 0);

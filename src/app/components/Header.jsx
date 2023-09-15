@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,10 +10,21 @@ import CartIcon from '../../../public/images/shared/desktop/icon-cart.svg';
 import Hamburger from './UI/Hamburger';
 import MobileMenu from './MobileMenu/MobileMenu';
 import CartModal from './CartModal/CartModal';
+import { CartContext } from '../context/CartContext';
 
 const Header = () => {
+	const { cart } = useContext(CartContext);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [cartModalOpen, setCartModalOpen] = useState(true);
+	const [numberInCart, setNumberInCart] = useState(0);
+
+	useEffect(() => {
+		setNumberInCart(
+			cart.reduce((accumulator, product) => {
+				return accumulator + product.quantity;
+			}, 0),
+		);
+	}, [cart]);
 
 	const closeMenuFromModal = () => {
 		setMobileMenuOpen((prevState) => !prevState);
@@ -65,8 +76,8 @@ const Header = () => {
 				className="cursor-pointer sm:ml-auto lg:ml-0"
 				onClick={handleCartModal}
 			/>
+			<p className="text-white">{numberInCart}</p>
 			{mobileMenuOpen && <MobileMenu closeMenu={closeMenuFromModal} />}
-
 			{cartModalOpen && <CartModal handleCartModal={handleCartModal} />}
 		</header>
 	);

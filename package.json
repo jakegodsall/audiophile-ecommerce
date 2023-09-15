@@ -11,6 +11,7 @@
   "dependencies": {
     "autoprefixer": "10.4.14",
     "framer-motion": "^10.12.22",
+    "jsdoc": "^4.0.2",
     "next": "13.4.10",
     "postcss": "8.4.26",
     "prettier": "^3.0.0",

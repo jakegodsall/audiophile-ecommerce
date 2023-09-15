@@ -1,10 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import BillingDetails from './formSections/BillingDetails';
-import ShippingDetails from './formSections/ShippingDetails';
-import PaymentDetails from './formSections/PaymentDetails';
-import EMoneyDetails from './formSections/EMoneyDetails';
+import BillingDetails from './FormSections/BillingDetails';
+import ShippingDetails from './FormSections/ShippingDetails';
+import PaymentDetails from './FormSections/PaymentDetails';
+import EMoneyDetails from './FormSections/EMoneyDetails';
+import SummaryDetails from './FormSections/SummarySection/SummaryDetails';
 
 const CheckoutForm = () => {
 	const [formData, setFormData] = useState({
@@ -79,7 +80,7 @@ const CheckoutForm = () => {
 				{formData.payment.method == 'e-money' && <EMoneyDetails />}
 			</div>
 			<div>
-				<button type="submit">Continue & Pay</button>
+				<SummaryDetails />
 			</div>
 		</form>
 	);
