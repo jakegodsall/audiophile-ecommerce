@@ -17,8 +17,6 @@ const EarphoneItem = () => {
 			product.slug === productSlug && product.category === 'earphones',
 	);
 
-	console.log(currentProduct);
-
 	return <ProductDetail product={currentProduct} />;
 };
 

@@ -17,8 +17,6 @@ const SpeakerItem = () => {
 			product.slug === productSlug && product.category === 'speakers',
 	);
 
-	console.log(currentProduct);
-
 	return <ProductDetail product={currentProduct} />;
 };
 

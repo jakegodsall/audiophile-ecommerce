@@ -59,7 +59,6 @@ const CheckoutForm = () => {
 
 	const onSubmitHandler = (e) => {
 		e.preventDefault();
-		console.log(e);
 	};
 
 	return (

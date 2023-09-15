@@ -15,7 +15,7 @@ const paymentOptions = [
 ];
 
 const PaymentDetails = ({ onRadioHandler, radioValue }) => {
-	console.log(radioValue);
+	radioValue;
 	const handleOptionChange = (e) => {
 		onRadioHandler(e.target.value);
 	};
