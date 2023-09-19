@@ -29,4 +29,17 @@ const getSelectedProducts = (cart, products) => {
 	return selectedProducts;
 };
 
-export { getSelectedProducts };
+const getTotalPrice = (productArray) => {
+	return productArray.reduce((accumulator, currentItem) => {
+		return (accumulator = currentItem.price * currentItem.quantity);
+	}, 0);
+};
+
+const formatCurrency = (value, locale = 'en-US', currency = 'USD') => {
+	return new Intl.NumberFormat(locale, {
+		style: 'currency',
+		currency: currency,
+	}).format(value);
+};
+
+export { getSelectedProducts, getTotalPrice, formatCurrency };

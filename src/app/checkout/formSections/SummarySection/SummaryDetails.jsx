@@ -1,7 +1,11 @@
 'use client';
 
 import React, { useContext } from 'react';
-import { getSelectedProducts } from '@/app/utilities/dataTransform';
+import {
+	formatCurrency,
+	getSelectedProducts,
+	getTotalPrice,
+} from '@/app/utilities/dataTransform';
 import { CartContext } from '@/app/context/CartContext';
 import { ProductsContext } from '@/app/context/ProductsContext';
 import SummaryItem from './SummaryItem';
@@ -11,30 +15,17 @@ const SummaryDetails = () => {
 	const { products } = useContext(ProductsContext);
 
 	const selectedProducts = getSelectedProducts(cart, products);
-	// const selectedProducts = [
-	// 	{
-	// 		id: 2,
-	// 		name: 'XX59',
-	// 		price: 899,
-	// 		image: '/images/product-xx59-headphones/mobile/image-product.jpg',
-	// 		quantity: 4,
-	// 	},
-	// 	{
-	// 		id: 4,
-	// 		name: 'XX99',
-	// 		price: 2999,
-	// 		image: '/images/product-xx99-mark-two-headphones/mobile/image-product.jpg',
-	// 		quantity: 3,
-	// 	},
 
-	// 	{
-	// 		id: 6,
-	// 		name: 'ZX9',
-	// 		price: 4500,
-	// 		image: '/images/product-zx9-speaker/mobile/image-product.jpg',
-	// 		quantity: 115,
-	// 	},
-	// ];
+	const totalPrice = getTotalPrice(selectedProducts);
+	const shippingPrice = 50;
+	const vatPrice = totalPrice * 0.2;
+
+	const summaryValues = {
+		price: formatCurrency(getTotalPrice(selectedProducts)),
+		shipping: formatCurrency(50),
+		vat: formatCurrency(getTotalPrice(selectedProducts) * 0.2),
+		total: formatCurrency(getTotalPrice(selectedProducts) + 50),
+	};
 
 	return (
 		<div className="w-full rounded-[0.8rem] bg-white px-[2.4rem] py-[3.2rem]">
@@ -55,26 +46,32 @@ const SummaryDetails = () => {
 					<p className="text-[1.5rem] font-medium uppercase text-black/50">
 						Total
 					</p>
-					<p className="text-[1.8rem] font-bold uppercase">$5396</p>
+					<p className="text-[1.8rem] font-bold uppercase">
+						{summaryValues.price}
+					</p>
 				</div>
 				<div className="mb-[0.8rem] flex items-center justify-between">
 					<p className="text-[1.5rem] font-medium uppercase text-black/50">
 						Shipping
 					</p>
-					<p className="text-[1.8rem] font-bold uppercase">$ 50</p>
+					<p className="text-[1.8rem] font-bold uppercase">
+						{summaryValues.shipping}
+					</p>
 				</div>
 				<div className="mb-[2.4rem] flex items-center justify-between">
 					<p className="text-[1.5rem] font-medium uppercase text-black/50">
 						VAT (INCLUDED)
 					</p>
-					<p className="text-[1.8rem] font-bold uppercase">$ 1,079</p>
+					<p className="text-[1.8rem] font-bold uppercase">
+						{summaryValues.vat}
+					</p>
 				</div>
 				<div className=" mb-[3.2rem] flex items-center justify-between">
 					<p className="text-[1.5rem] font-medium uppercase text-black/50">
 						Grand Total
 					</p>
 					<p className="text-[1.8rem] font-bold uppercase text-primary-orange">
-						$5,466
+						{summaryValues.totalPrice}
 					</p>
 				</div>
 				<button

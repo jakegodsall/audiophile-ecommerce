@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import QuantitySelector from './UI/QuantitySelector';
 import { CartContext } from '../context/CartContext';
 import RecommendationSection from './ProductRecommendation/RecommendationSection';
+import { formatCurrency } from '../utilities/dataTransform';
 
 const ProductDetail = ({ product }) => {
 	const router = useRouter();
@@ -76,7 +77,7 @@ const ProductDetail = ({ product }) => {
 								{product.description}
 							</p>
 							<p className="text-[1.8rem] font-bold uppercase tracking-[0.1286rem]">
-								$ {product.price}
+								{formatCurrency(product.price)}
 							</p>
 							<div className="flex items-center gap-[1.6rem]">
 								<QuantitySelector

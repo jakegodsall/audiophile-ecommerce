@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import QuantitySelector from '../UI/QuantitySelector';
 import { useRouter } from 'next/navigation';
+import { formatCurrency } from '@/app/utilities/dataTransform';
 
 const CartItem = ({ product }) => {
 	const router = useRouter();
@@ -23,7 +24,7 @@ const CartItem = ({ product }) => {
 						{product.name}
 					</p>
 					<p className="text-[1.4rem] font-bold text-black/50">
-						${product.price}
+						{formatCurrency(product.price)}
 					</p>
 				</div>
 			</div>
