@@ -29,12 +29,13 @@ const CartModal = ({ handleCartModal }) => {
 			image: '/images/product-xx99-mark-two-headphones/mobile/image-product.jpg',
 			quantity: 3,
 		},
+
 		{
 			id: 6,
 			name: 'ZX9',
 			price: 4500,
 			image: '/images/product-zx9-speaker/mobile/image-product.jpg',
-			quantity: 5,
+			quantity: 115,
 		},
 	];
 

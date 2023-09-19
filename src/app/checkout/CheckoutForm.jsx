@@ -67,7 +67,7 @@ const CheckoutForm = () => {
 			onSubmit={onSubmitHandler}
 			className="flex w-full flex-col items-center rounded-[0.8rem]"
 		>
-			<div className="w-full bg-white p-[2.4rem]">
+			<div className="mb-[3.2rem] w-full bg-white p-[2.4rem]">
 				<h1 className="mb-[3.2rem] text-[2.8rem] font-bold uppercase tracking-[0.1rem]">
 					Checkout
 				</h1>
@@ -79,9 +79,7 @@ const CheckoutForm = () => {
 				/>
 				{formData.payment.method == 'e-money' && <EMoneyDetails />}
 			</div>
-			<div>
-				<SummaryDetails />
-			</div>
+			<SummaryDetails />
 		</form>
 	);
 };
