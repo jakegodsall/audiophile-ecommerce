@@ -15,7 +15,7 @@ import { CartContext } from '../context/CartContext';
 const Header = () => {
 	const { cart } = useContext(CartContext);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const [cartModalOpen, setCartModalOpen] = useState(true);
+	const [cartModalOpen, setCartModalOpen] = useState(false);
 	const [numberInCart, setNumberInCart] = useState(0);
 
 	useEffect(() => {

@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const SummaryItem = ({ product }) => {
-	console.log('from item', product);
+	const router = useRouter();
 	return (
 		<div className="flex items-center justify-between ">
 			<div className="flex items-center gap-x-[1.6rem]">
@@ -11,6 +12,7 @@ const SummaryItem = ({ product }) => {
 					width="64"
 					height="64"
 					className="rounded-[0.8rem]"
+					onClick={() => router.push(product.link)}
 				/>
 				<div>
 					<p className="text-[1.5rem] font-bold leading-[2.5rem]">

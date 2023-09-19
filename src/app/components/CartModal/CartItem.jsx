@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import QuantitySelector from '../UI/QuantitySelector';
+import { useRouter } from 'next/navigation';
 
 const CartItem = ({ product }) => {
+	const router = useRouter();
 	return (
 		<div className="flex w-full items-center justify-between">
 			<div className="flex items-center">
@@ -12,6 +14,9 @@ const CartItem = ({ product }) => {
 					width={64}
 					height={64}
 					className="mr-[1.6rem]"
+					onClick={() => {
+						router.push(product.link);
+					}}
 				/>
 				<div>
 					<p className="text-[1.5rem] font-bold leading-[2.5rem]">

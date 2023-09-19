@@ -10,31 +10,31 @@ const SummaryDetails = () => {
 	const { cart } = useContext(CartContext);
 	const { products } = useContext(ProductsContext);
 
-	// const selectedProducts = getSelectedProducts(cart, products);
-	const selectedProducts = [
-		{
-			id: 2,
-			name: 'XX59',
-			price: 899,
-			image: '/images/product-xx59-headphones/mobile/image-product.jpg',
-			quantity: 4,
-		},
-		{
-			id: 4,
-			name: 'XX99',
-			price: 2999,
-			image: '/images/product-xx99-mark-two-headphones/mobile/image-product.jpg',
-			quantity: 3,
-		},
+	const selectedProducts = getSelectedProducts(cart, products);
+	// const selectedProducts = [
+	// 	{
+	// 		id: 2,
+	// 		name: 'XX59',
+	// 		price: 899,
+	// 		image: '/images/product-xx59-headphones/mobile/image-product.jpg',
+	// 		quantity: 4,
+	// 	},
+	// 	{
+	// 		id: 4,
+	// 		name: 'XX99',
+	// 		price: 2999,
+	// 		image: '/images/product-xx99-mark-two-headphones/mobile/image-product.jpg',
+	// 		quantity: 3,
+	// 	},
 
-		{
-			id: 6,
-			name: 'ZX9',
-			price: 4500,
-			image: '/images/product-zx9-speaker/mobile/image-product.jpg',
-			quantity: 115,
-		},
-	];
+	// 	{
+	// 		id: 6,
+	// 		name: 'ZX9',
+	// 		price: 4500,
+	// 		image: '/images/product-zx9-speaker/mobile/image-product.jpg',
+	// 		quantity: 115,
+	// 	},
+	// ];
 
 	return (
 		<div className="w-full rounded-[0.8rem] bg-white px-[2.4rem] py-[3.2rem]">
