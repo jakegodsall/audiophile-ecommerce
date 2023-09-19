@@ -70,13 +70,19 @@ const Header = () => {
 					</li>
 				</ul>
 			</nav>
-			<Image
-				src={CartIcon}
-				alt="shopping cart"
-				className="cursor-pointer sm:ml-auto lg:ml-0"
-				onClick={handleCartModal}
-			/>
-			<p className="text-white">{numberInCart}</p>
+			<div className="relative">
+				<Image
+					src={CartIcon}
+					alt="shopping cart"
+					className="cursor-pointer sm:ml-auto lg:ml-0"
+					onClick={handleCartModal}
+				/>
+				{numberInCart > 0 && (
+					<p className="absolute right-[-1rem] top-[-1.2rem] rounded-full bg-primary-orange p-[.4rem] text-white">
+						{numberInCart}
+					</p>
+				)}
+			</div>
 			{mobileMenuOpen && <MobileMenu closeMenu={closeMenuFromModal} />}
 			{cartModalOpen && <CartModal handleCartModal={handleCartModal} />}
 		</header>
