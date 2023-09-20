@@ -71,7 +71,7 @@ const SummaryDetails = () => {
 						Grand Total
 					</p>
 					<p className="text-[1.8rem] font-bold uppercase text-primary-orange">
-						{summaryValues.totalPrice}
+						{summaryValues.total}
 					</p>
 				</div>
 				<button

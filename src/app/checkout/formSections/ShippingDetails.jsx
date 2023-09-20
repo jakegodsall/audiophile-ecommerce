@@ -2,11 +2,11 @@ import React from 'react';
 
 const ShippingDetails = ({ onChangeHandler }) => {
 	return (
-		<fieldset className="mb-[3.2rem]">
+		<fieldset className="mb-[3.2rem] flex flex-col sm:flex-row sm:flex-wrap">
 			<legend className="mb-[1.6rem] text-[1.3rem] font-medium uppercase tracking-[0.1rem] text-primary-orange">
 				Shipping Info
 			</legend>
-			<div className="mb-[2.4rem] flex flex-col">
+			<div className="mb-[2.4rem] flex flex-col sm:w-full">
 				<label
 					htmlFor="address"
 					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"
@@ -24,7 +24,7 @@ const ShippingDetails = ({ onChangeHandler }) => {
 					}}
 				/>
 			</div>
-			<div className="mb-[2.4rem] flex flex-col">
+			<div className="mb-[2.4rem] flex flex-col sm:mr-[1.6rem] sm:flex-1">
 				<label
 					htmlFor="zip"
 					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"
@@ -42,7 +42,7 @@ const ShippingDetails = ({ onChangeHandler }) => {
 					}}
 				/>
 			</div>
-			<div className="mb-[2.4rem] flex flex-col">
+			<div className="mb-[2.4rem] flex flex-col sm:flex-1">
 				<label
 					htmlFor="city"
 					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"
@@ -60,7 +60,7 @@ const ShippingDetails = ({ onChangeHandler }) => {
 					}}
 				/>
 			</div>
-			<div className="mb-[2.4rem] flex flex-col">
+			<div className="mb-[2.4rem] flex flex-col sm:w-[calc(50%-0.8rem)]">
 				<label
 					htmlFor="country"
 					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"

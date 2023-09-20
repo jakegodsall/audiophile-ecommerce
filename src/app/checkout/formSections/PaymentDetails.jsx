@@ -29,10 +29,10 @@ const PaymentDetails = ({ onRadioHandler, radioValue }) => {
 				<legend className="mb-[1.7rem] text-[1.2rem] font-bold">
 					Payment Method
 				</legend>
-				<ul className="flex flex-col gap-[1.6rem]">
+				<ul className="flex flex-col items-end gap-[1.6rem]">
 					{paymentOptions.map((option) => {
 						return (
-							<li key={option.id}>
+							<li key={option.id} className="sm:w-1/2">
 								<RadioControl
 									value={option.value}
 									selected={radioValue === option.value}

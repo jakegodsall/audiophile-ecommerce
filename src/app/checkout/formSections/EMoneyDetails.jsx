@@ -2,8 +2,8 @@ import React from 'react';
 
 const EMoneyDetails = () => {
 	return (
-		<fieldset className="mb-[3.2rem]">
-			<div className="mb-[2.4rem] flex flex-col">
+		<fieldset className="mb-[3.2rem] flex flex-col sm:flex-row sm:gap-x-[1.6rem]">
+			<div className="mb-[2.4rem] flex flex-col sm:flex-1">
 				<label
 					htmlFor="e-money-number"
 					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"
@@ -18,7 +18,7 @@ const EMoneyDetails = () => {
 					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline-none"
 				/>
 			</div>
-			<div className="mb-[2.4rem] flex flex-col">
+			<div className="mb-[2.4rem] flex flex-col sm:flex-1">
 				<label
 					htmlFor="e-money-pin"
 					className="mb-[1rem] text-[1.2rem] font-bold tracking-[-0.02rem]"
