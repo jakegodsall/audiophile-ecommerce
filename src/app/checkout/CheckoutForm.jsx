@@ -6,6 +6,7 @@ import ShippingDetails from './FormSections/ShippingDetails';
 import PaymentDetails from './FormSections/PaymentDetails';
 import EMoneyDetails from './FormSections/EMoneyDetails';
 import SummaryDetails from './FormSections/SummarySection/SummaryDetails';
+import CashOnDeliveryText from './FormSections/CashOnDeliveryText';
 
 const CheckoutForm = () => {
 	const [formData, setFormData] = useState({
@@ -65,7 +66,7 @@ const CheckoutForm = () => {
 	return (
 		<form
 			onSubmit={onSubmitHandler}
-			className="flex w-full flex-col items-center rounded-[0.8rem]"
+			className="flex w-full flex-col items-center rounded-[0.8rem] pb-[9.7rem] sm:pb-[11.6rem] lg:flex-row lg:gap-x-[3rem] lg:pb-[14.1rem]"
 		>
 			<div className="mb-[3.2rem] w-full bg-white p-[2.4rem]">
 				<h1 className="mb-[3.2rem] text-[2.8rem] font-bold uppercase tracking-[0.1rem]">
@@ -77,9 +78,14 @@ const CheckoutForm = () => {
 					onRadioHandler={onRadioHandler}
 					radioValue={formData.payment.method}
 				/>
+				{formData.payment.method == 'cash-on-delivery' && (
+					<CashOnDeliveryText />
+				)}
 				{formData.payment.method == 'e-money' && <EMoneyDetails />}
 			</div>
-			<SummaryDetails />
+			<div className="w-full lg:max-w-[40%] lg:self-start">
+				<SummaryDetails />
+			</div>
 		</form>
 	);
 };

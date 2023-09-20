@@ -1,3 +1,4 @@
+import BringingAudio from '../components/BringingAudio';
 import ProductNavigationBar from '../components/ProductNavigation/ProductNavigationBar';
 
 const ProductLayout = ({ children }) => {
@@ -5,6 +6,7 @@ const ProductLayout = ({ children }) => {
 		<div>
 			{children}
 			<ProductNavigationBar />
+			<BringingAudio />
 		</div>
 	);
 };

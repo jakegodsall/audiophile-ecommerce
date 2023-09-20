@@ -32,7 +32,7 @@ const PaymentDetails = ({ onRadioHandler, radioValue }) => {
 				<ul className="flex flex-col items-end gap-[1.6rem]">
 					{paymentOptions.map((option) => {
 						return (
-							<li key={option.id} className="sm:w-1/2">
+							<li key={option.id} className="w-full sm:w-1/2">
 								<RadioControl
 									value={option.value}
 									selected={radioValue === option.value}
