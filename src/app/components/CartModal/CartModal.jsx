@@ -19,7 +19,10 @@ const CartModal = ({ handleCartModal }) => {
 	const productArray = getSelectedProducts(cart, products);
 
 	const totalPrice = getTotalPrice(productArray);
-	console.log(productArray);
+
+	const clearCartHandler = () => {
+		setCart([]);
+	};
 
 	return (
 		<div
@@ -27,9 +30,17 @@ const CartModal = ({ handleCartModal }) => {
 			onClick={handleCartModal}
 		>
 			<div className="relative mx-[2.4rem] ml-auto mt-[2.4rem] flex max-w-[37rem] flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] md:mr-[10rem]">
-				<h3 className=" mb-[3.2rem] self-start text-[1.8rem] font-bold uppercase tracking-[0.12rem]">
-					Cart {`(${productArray.length})`}
-				</h3>
+				<div className="mb-[3.2rem] flex w-full flex-row items-center justify-between">
+					<h3 className="self-start text-[1.8rem] font-bold uppercase tracking-[0.12rem]">
+						Cart {`(${productArray.length})`}
+					</h3>
+					<p
+						className="text-[1.5rem] font-medium text-black/50 underline"
+						onClick={clearCartHandler}
+					>
+						Remove All
+					</p>
+				</div>
 				<ul className="mb-[3.2rem] flex w-full flex-col gap-y-[2.4rem]">
 					{productArray.map((product) => {
 						return (
