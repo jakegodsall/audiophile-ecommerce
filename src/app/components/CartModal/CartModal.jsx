@@ -23,10 +23,10 @@ const CartModal = ({ handleCartModal }) => {
 
 	return (
 		<div
-			className="absolute bottom-[9rem] left-0 right-0 top-[9rem] z-20 h-full bg-black/40"
+			className="absolute bottom-[9rem] left-0 right-0 top-[9rem] z-20 h-full max-w-[144rem] bg-black/40 lg:ml-auto lg:mr-auto"
 			onClick={handleCartModal}
 		>
-			<div className="relative mx-[2.4rem] mt-[2.4rem] flex flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem]">
+			<div className="relative mx-[2.4rem] ml-auto mt-[2.4rem] flex max-w-[37rem] flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] md:mr-[10rem]">
 				<h3 className=" mb-[3.2rem] self-start text-[1.8rem] font-bold uppercase tracking-[0.12rem]">
 					Cart {`(${productArray.length})`}
 				</h3>
