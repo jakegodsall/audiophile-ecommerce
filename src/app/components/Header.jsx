@@ -52,7 +52,7 @@ const Header = () => {
 				src={Logo}
 				width={143}
 				height={23}
-				className="h-[2.5rem] w-[14.3rem] sm:ml-[4.2rem] lg:ml-0"
+				className="h-[2.5rem] w-[14.3rem] cursor-pointer sm:ml-[4.2rem] lg:ml-0"
 				alt="audiophile logo"
 				onClick={() => router.push('/')}
 			/>
