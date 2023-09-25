@@ -35,7 +35,7 @@ const CartModal = ({ handleCartModal }) => {
 						Cart {`(${productArray.length})`}
 					</h3>
 					<p
-						className="text-[1.5rem] font-medium text-black/50 underline"
+						className="cursor-pointer text-[1.5rem] font-medium text-black/50 underline"
 						onClick={clearCartHandler}
 					>
 						Remove All

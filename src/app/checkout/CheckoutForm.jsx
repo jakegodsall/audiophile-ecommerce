@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import BillingDetails from './FormSections/BillingDetails';
-import ShippingDetails from './FormSections/ShippingDetails';
-import PaymentDetails from './FormSections/PaymentDetails';
-import EMoneyDetails from './FormSections/EMoneyDetails';
-import SummaryDetails from './FormSections/SummarySection/SummaryDetails';
-import CashOnDeliveryText from './FormSections/CashOnDeliveryText';
+import BillingDetails from './formSections/BillingDetails';
+import ShippingDetails from './formSections/ShippingDetails';
+import PaymentDetails from './formSections/PaymentDetails';
+import EMoneyDetails from './formSections/EMoneyDetails';
+import SummaryDetails from './formSections/SummarySection/SummaryDetails';
+import CashOnDeliveryText from './formSections/CashOnDeliveryText';
 
 const CheckoutForm = () => {
 	const [formData, setFormData] = useState({
