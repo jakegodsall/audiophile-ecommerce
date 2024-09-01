@@ -12,6 +12,7 @@ import Hamburger from './UI/Hamburger';
 import MobileMenu from './MobileMenu/MobileMenu';
 import CartModal from './CartModal/CartModal';
 import { CartContext } from '../context/CartContext';
+import { AnimatePresence } from 'framer-motion';
 
 const Header = () => {
 	const router = useRouter();
@@ -87,7 +88,11 @@ const Header = () => {
 				)}
 			</div>
 			{mobileMenuOpen && <MobileMenu closeMenu={closeMenuFromModal} />}
-			{cartModalOpen && <CartModal handleCartModal={handleCartModal} />}
+			<AnimatePresence>
+				{cartModalOpen && (
+					<CartModal handleCartModal={handleCartModal} />
+				)}
+			</AnimatePresence>
 		</header>
 	);
 };
