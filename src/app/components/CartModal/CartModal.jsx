@@ -17,18 +17,19 @@ const CartModal = ({ handleCartModal }) => {
 	const { products } = useContext(ProductsContext);
 	const productArray = getSelectedProducts(cart, products);
 
-	const [isTransitioningToEmpty, setIsTransitioningToEmpty] = useState(false);
+	const [showEmptyMessage, setShowEmptyMessage] = useState(true);
 
 	const totalPrice = getTotalPrice(productArray);
 
 	const numOfProductsInCart = productArray.length;
 
 	const clearCartHandler = () => {
-		setIsTransitioningToEmpty(true);
 		setCart([]);
+		setShowEmptyMessage(false);
+
 		setTimeout(() => {
-			setIsTransitioningToEmpty(false);
-		}, 2000);
+			setShowEmptyMessage(true);
+		}, 500);
 	};
 
 	return (
@@ -44,10 +45,10 @@ const CartModal = ({ handleCartModal }) => {
 				exit={{ opacity: 0 }}
 			></motion.div>
 			{/* cart modal */}
-			<div className="fixed left-0 right-0 top-[9rem] z-20 mx-6 mt-[4rem] flex w-[90%] max-w-[37rem] flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] md:ml-auto md:mr-[4rem] md:w-full lg:mr-[16.5rem] lg:mt-[3.2rem]">
+			<div className="fixed left-0 right-0 top-[9rem] z-20 mx-6 mt-[4rem] flex min-h-[32rem] w-[90%] max-w-[37rem] flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] md:ml-auto md:mr-[4rem] md:w-full lg:mr-[16.5rem] lg:mt-[3.2rem]">
 				<div className="mb-[3.2rem] flex w-full flex-row items-center justify-between">
 					<h3 className="self-start text-[1.8rem] font-bold uppercase tracking-[0.12rem]">
-						Cart {`(${productArray.length})`}
+						Cart {`(${numOfProductsInCart})`}
 					</h3>
 					{numOfProductsInCart !== 0 && (
 						<p
@@ -59,25 +60,12 @@ const CartModal = ({ handleCartModal }) => {
 					)}
 				</div>
 				<AnimatePresence>
-					{numOfProductsInCart === 0 && !isTransitioningToEmpty && (
+					{numOfProductsInCart === 0 && showEmptyMessage && (
 						<motion.p
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							exit={{ opacity: 0 }}
-							className="text-[1.5rem]"
-						>
-							Your cart is empty.
-						</motion.p>
-					)}
-				</AnimatePresence>
-				<AnimatePresence>
-					{numOfProductsInCart === 0 && isTransitioningToEmpty && (
-						<motion.p
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							exit={{ opacity: 0 }}
-							transition={{ delay: 2 }}
-							className="text-[1.5rem]"
+							className="mt-[4rem] text-[1.6rem]"
 						>
 							Your cart is empty.
 						</motion.p>
@@ -88,7 +76,8 @@ const CartModal = ({ handleCartModal }) => {
 						<motion.div
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
-							exit={{ opacity: 0, transition: { duration: 0.5 } }}
+							exit={{ opacity: 0 }}
+							className="w-full"
 						>
 							<ul className="mb-[3.2rem] flex w-full flex-col gap-y-[2.4rem]">
 								{productArray.map((product) => {
