@@ -37,6 +37,10 @@ const Header = () => {
 		setCartModalOpen((prevState) => !prevState);
 	};
 
+	const forceCloseCartModal = () => {
+		setCartModalOpen(false);
+	};
+
 	const setIsActiveHandler = () => {
 		setMobileMenuOpen((prevState) => !prevState);
 	};
@@ -61,22 +65,22 @@ const Header = () => {
 			<nav className="hidden w-[0] lg:flex lg:w-[45rem]">
 				<ul className="flex gap-[3.4rem]">
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						<Link href="/" onClick={handleCartModal}>
+						<Link href="/" onClick={forceCloseCartModal}>
 							home
 						</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						<Link href="/headphones" onClick={handleCartModal}>
+						<Link href="/headphones" onClick={forceCloseCartModal}>
 							headphones
 						</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						<Link href="/speakers" onClick={handleCartModal}>
+						<Link href="/speakers" onClick={forceCloseCartModal}>
 							speakers
 						</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						<Link href="/earphones" onClick={handleCartModal}>
+						<Link href="/earphones" onClick={forceCloseCartModal}>
 							earphones
 						</Link>
 					</li>

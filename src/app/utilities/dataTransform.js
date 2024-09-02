@@ -29,6 +29,12 @@ const getSelectedProducts = (cart, products) => {
 	return selectedProducts;
 };
 
+const getTotalNumberOfProducts = (productArray) => {
+	return productArray.reduce((total, item) => {
+		return total + item.quantity || 0;
+	}, 0);
+};
+
 const getTotalPrice = (productArray) => {
 	return productArray.reduce((accumulator, currentItem) => {
 		return (accumulator = currentItem.price * currentItem.quantity);
@@ -42,4 +48,9 @@ const formatCurrency = (value, locale = 'en-US', currency = 'USD') => {
 	}).format(value);
 };
 
-export { getSelectedProducts, getTotalPrice, formatCurrency };
+export {
+	getSelectedProducts,
+	getTotalNumberOfProducts,
+	getTotalPrice,
+	formatCurrency,
+};

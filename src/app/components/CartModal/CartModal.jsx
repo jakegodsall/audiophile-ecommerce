@@ -9,6 +9,7 @@ import CartItem from './CartItem';
 import {
 	formatCurrency,
 	getSelectedProducts,
+	getTotalNumberOfProducts,
 	getTotalPrice,
 } from '@/app/utilities/dataTransform';
 
@@ -21,7 +22,7 @@ const CartModal = ({ handleCartModal }) => {
 
 	const totalPrice = getTotalPrice(productArray);
 
-	const numOfProductsInCart = productArray.length;
+	const numOfProductsInCart = getTotalNumberOfProducts(productArray);
 
 	const clearCartHandler = () => {
 		setCart([]);
@@ -32,7 +33,11 @@ const CartModal = ({ handleCartModal }) => {
 		}, 500);
 	};
 
+	console.log('CART:');
 	console.log(cart);
+	console.log(productArray);
+	console.log('NUM PRODUCTS:');
+	console.log(numOfProductsInCart);
 
 	return (
 		// overlay
