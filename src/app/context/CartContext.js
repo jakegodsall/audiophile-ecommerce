@@ -4,6 +4,7 @@ import { createContext, useState } from 'react';
 
 const CartContext = createContext();
 
+// Represents the selected products in the user's cart
 const CartProvider = ({ children }) => {
 	const [cart, setCart] = useState([]);
 

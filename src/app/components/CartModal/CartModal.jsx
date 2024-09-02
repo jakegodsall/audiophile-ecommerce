@@ -13,15 +13,20 @@ import {
 	getTotalPrice,
 } from '@/app/utilities/dataTransform';
 
-const CartModal = ({ handleCartModal }) => {
-	const { cart, setCart } = useContext(CartContext);
-	const { products } = useContext(ProductsContext);
+const CartModal = ({ handleCartModal, forceCloseCartModal }) => {
+	const { products } = useContext(ProductsContext); // all available products
+	const { cart, setCart } = useContext(CartContext); // items selected in user's cart
+
+	// get array of selected products for rendering in the modal
 	const productArray = getSelectedProducts(cart, products);
 
+	// state for deciding whether to show cart items or empty message
 	const [showEmptyMessage, setShowEmptyMessage] = useState(true);
 
+	// total price of all items in the cart
 	const totalPrice = getTotalPrice(productArray);
 
+	// total number of items in the cart
 	const numOfProductsInCart = getTotalNumberOfProducts(productArray);
 
 	const clearCartHandler = () => {
@@ -33,12 +38,6 @@ const CartModal = ({ handleCartModal }) => {
 		}, 500);
 	};
 
-	console.log('CART:');
-	console.log(cart);
-	console.log(productArray);
-	console.log('NUM PRODUCTS:');
-	console.log(numOfProductsInCart);
-
 	return (
 		// overlay
 		<>
@@ -46,7 +45,7 @@ const CartModal = ({ handleCartModal }) => {
 				className="fixed bottom-[9rem] left-0 right-0 top-[9rem] z-10 flex
 			h-full max-w-[144rem] flex-col items-center bg-black/40
 			md:top-[10.5rem] md:block lg:ml-auto lg:mr-auto"
-				onClick={handleCartModal}
+				onClick={forceCloseCartModal}
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}

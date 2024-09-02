@@ -573,6 +573,7 @@ const PRODUCTS = [
 
 const ProductsContext = createContext();
 
+// Represents all the available products
 const ProductsProvider = ({ children }) => {
 	const [products, setProducts] = useState(PRODUCTS);
 

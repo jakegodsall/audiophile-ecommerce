@@ -12,22 +12,24 @@ import Hamburger from './UI/Hamburger';
 import MobileMenu from './MobileMenu/MobileMenu';
 import CartModal from './CartModal/CartModal';
 import { CartContext } from '../context/CartContext';
+import { ProductsContext } from '@/app/context/ProductsContext';
 import { AnimatePresence } from 'framer-motion';
+import {
+	getTotalNumberOfProducts,
+	getSelectedProducts,
+} from '../utilities/dataTransform';
 
 const Header = () => {
 	const router = useRouter();
-	const { cart } = useContext(CartContext);
+
+	const { products } = useContext(ProductsContext); // all available products
+	const { cart } = useContext(CartContext); // products in the cart
+
+	// state for managing open/close state of modals
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [cartModalOpen, setCartModalOpen] = useState(false);
-	const [numberInCart, setNumberInCart] = useState(0);
 
-	useEffect(() => {
-		setNumberInCart(
-			cart.reduce((accumulator, product) => {
-				return accumulator + product.quantity;
-			}, 0),
-		);
-	}, [cart]);
+	// functions for handlign open/close states of modals
 
 	const closeMenuFromModal = () => {
 		setMobileMenuOpen((prevState) => !prevState);
@@ -93,9 +95,9 @@ const Header = () => {
 					className="cursor-pointer sm:ml-auto lg:ml-0"
 					onClick={handleCartModal}
 				/>
-				{numberInCart > 0 && (
+				{1 > 0 && (
 					<p className="absolute right-[-1rem] top-[-1.2rem] rounded-full bg-primary-orange p-[.4rem] text-white">
-						{numberInCart}
+						3
 					</p>
 				)}
 			</div>
@@ -106,7 +108,10 @@ const Header = () => {
 			</AnimatePresence>
 			<AnimatePresence>
 				{cartModalOpen && (
-					<CartModal handleCartModal={handleCartModal} />
+					<CartModal
+						handleCartModal={handleCartModal}
+						forceCloseCartModal={forceCloseCartModal}
+					/>
 				)}
 			</AnimatePresence>
 		</header>
