@@ -1,11 +1,34 @@
-import React from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Image from 'next/image';
-import QuantitySelector from '../UI/QuantitySelector';
 import { useRouter } from 'next/navigation';
+
+import { CartContext } from '@/app/context/CartContext';
+import QuantitySelector from '../UI/QuantitySelector';
 import { formatCurrency } from '@/app/utilities/dataTransform';
 
 const CartItem = ({ product }) => {
 	const router = useRouter();
+
+	const { cart, setCart } = useContext(CartContext);
+	const [quantity, setQuantity] = useState(product.quantity);
+
+	useEffect(() => {
+		const productCart = {
+			productId: product.id,
+			quantity: quantity,
+		};
+
+		setCart((prevState) => {
+			const item = prevState.find((el) => el.productId === product.id);
+			if (item) {
+				item.quantity = quantity;
+				return prevState;
+			} else {
+				return [...prevState, productCart];
+			}
+		});
+	}, [quantity]);
+
 	return (
 		<div className="flex w-full items-center justify-between">
 			<div className="flex items-center">
@@ -28,7 +51,11 @@ const CartItem = ({ product }) => {
 					</p>
 				</div>
 			</div>
-			<QuantitySelector quantity={product.quantity} cart />
+			<QuantitySelector
+				quantity={quantity}
+				setQuantity={setQuantity}
+				cart
+			/>
 		</div>
 	);
 };
