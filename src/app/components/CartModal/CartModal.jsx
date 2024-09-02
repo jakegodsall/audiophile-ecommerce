@@ -20,11 +20,13 @@ const CartModal = ({ handleCartModal, forceCloseCartModal }) => {
 	// get array of selected products for rendering in the modal
 	const productArray = getSelectedProducts(cart, products);
 
+	const [totalPrice, setTotalPrice] = useState(0);
+
 	// state for deciding whether to show cart items or empty message
 	const [showEmptyMessage, setShowEmptyMessage] = useState(true);
 
 	// total price of all items in the cart
-	const totalPrice = getTotalPrice(productArray);
+	// const totalPrice = getTotalPrice(productArray);
 
 	// total number of items in the cart
 	const numOfProductsInCart = getTotalNumberOfProducts(cart);
@@ -37,6 +39,13 @@ const CartModal = ({ handleCartModal, forceCloseCartModal }) => {
 			setShowEmptyMessage(true);
 		}, 500);
 	};
+
+	useEffect(() => {
+		const productArray = getSelectedProducts(cart, products);
+		const total = getTotalPrice(productArray);
+		setTotalPrice(total);
+		console.log('IS CHANGING');
+	});
 
 	console.log(cart);
 

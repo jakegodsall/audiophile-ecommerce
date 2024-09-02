@@ -12,20 +12,13 @@ const CartItem = ({ product }) => {
 	const { cart, setCart } = useContext(CartContext);
 	const [quantity, setQuantity] = useState(product.quantity);
 
-	useEffect(() => {
-		const productCart = {
-			productId: product.id,
-			quantity: quantity,
-		};
 
+	useEffect(() => {
 		setCart((prevState) => {
-			const item = prevState.find((el) => el.productId === product.id);
-			if (item) {
-				item.quantity = quantity;
-				return prevState;
-			} else {
-				return [...prevState, productCart];
-			}
+			const newState = prevState.map((item) =>
+				item.id === product.id ? { ...item, quantity: quantity } : item,
+			);
+			return newState;
 		});
 	}, [quantity]);
 

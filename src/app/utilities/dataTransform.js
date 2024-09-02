@@ -8,11 +8,13 @@
  */
 const getSelectedProducts = (cart, products) => {
 	const selectedProducts = [];
+
 	cart.map((itemInCart) => {
 		// find associated value in products object
 		const product = products.find(
-			(product) => product.id === itemInCart.productId,
+			(product) => product.id === itemInCart.id,
 		);
+
 		// build object
 		const item = {
 			id: product.id,
@@ -36,7 +38,7 @@ const getTotalNumberOfProducts = (cart) => {
 
 const getTotalPrice = (productArray) => {
 	return productArray.reduce((accumulator, currentItem) => {
-		return (accumulator = currentItem.price * currentItem.quantity);
+		return accumulator + currentItem.price * currentItem.quantity;
 	}, 0);
 };
 

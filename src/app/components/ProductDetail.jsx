@@ -18,18 +18,27 @@ const ProductDetail = ({ product }) => {
 	};
 
 	const addToCartHandler = () => {
-		const productCart = {
-			productId: product.id,
-			quantity: quantity,
-		};
-
 		setCart((prevState) => {
-			const item = prevState.find((el) => el.productId === product.id);
-			if (item) {
-				item.quantity += quantity;
-				return prevState;
+			// Check if the product is already in the cart
+			const itemIndex = prevState.findIndex((el) => el.id === product.id);
+
+			if (itemIndex !== -1) {
+				// If the product is already in the cart, update its quantity
+				const updatedCart = [...prevState];
+				updatedCart[itemIndex] = {
+					...updatedCart[itemIndex],
+					quantity: updatedCart[itemIndex].quantity + quantity,
+				};
+				return updatedCart;
 			} else {
-				return [...prevState, productCart];
+				// If the product is not in the cart, add it
+				return [
+					...prevState,
+					{
+						id: product.id,
+						quantity: quantity,
+					},
+				];
 			}
 		});
 	};
