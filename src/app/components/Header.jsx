@@ -25,9 +25,19 @@ const Header = () => {
 	const { products } = useContext(ProductsContext); // all available products
 	const { cart } = useContext(CartContext); // products in the cart
 
+	const [numberInCart, setNumberInCart] = useState(0);
+
 	// state for managing open/close state of modals
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [cartModalOpen, setCartModalOpen] = useState(false);
+
+	useEffect(() => {
+		setNumberInCart(
+			cart.reduce((accumulator, product) => {
+				return accumulator + product.quantity;
+			}, 0),
+		);
+	});
 
 	// functions for handling open/close states of modals
 
@@ -95,6 +105,11 @@ const Header = () => {
 					className="cursor-pointer sm:ml-auto lg:ml-0"
 					onClick={handleCartModal}
 				/>
+				{numberInCart > 0 && (
+					<p className="absolute right-[-1rem] top-[-1.2rem] rounded-full bg-primary-orange p-[.4rem] font-bold text-white">
+						{numberInCart}
+					</p>
+				)}
 			</div>
 			<AnimatePresence>
 				{mobileMenuOpen && (
