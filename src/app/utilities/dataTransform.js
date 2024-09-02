@@ -28,8 +28,8 @@ const getSelectedProducts = (cart, products) => {
 	return selectedProducts;
 };
 
-const getTotalNumberOfProducts = (productArray) => {
-	return productArray.reduce((total, item) => {
+const getTotalNumberOfProducts = (cart) => {
+	return cart.reduce((total, item) => {
 		return total + item.quantity || 0;
 	}, 0);
 };

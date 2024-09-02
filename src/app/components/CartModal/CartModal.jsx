@@ -27,7 +27,7 @@ const CartModal = ({ handleCartModal, forceCloseCartModal }) => {
 	const totalPrice = getTotalPrice(productArray);
 
 	// total number of items in the cart
-	const numOfProductsInCart = getTotalNumberOfProducts(productArray);
+	const numOfProductsInCart = getTotalNumberOfProducts(cart);
 
 	const clearCartHandler = () => {
 		setCart([]);
@@ -37,6 +37,8 @@ const CartModal = ({ handleCartModal, forceCloseCartModal }) => {
 			setShowEmptyMessage(true);
 		}, 500);
 	};
+
+	console.log(cart);
 
 	return (
 		// overlay

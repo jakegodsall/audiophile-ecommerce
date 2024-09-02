@@ -29,7 +29,7 @@ const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [cartModalOpen, setCartModalOpen] = useState(false);
 
-	// functions for handlign open/close states of modals
+	// functions for handling open/close states of modals
 
 	const closeMenuFromModal = () => {
 		setMobileMenuOpen((prevState) => !prevState);
@@ -95,11 +95,6 @@ const Header = () => {
 					className="cursor-pointer sm:ml-auto lg:ml-0"
 					onClick={handleCartModal}
 				/>
-				{1 > 0 && (
-					<p className="absolute right-[-1rem] top-[-1.2rem] rounded-full bg-primary-orange p-[.4rem] text-white">
-						3
-					</p>
-				)}
 			</div>
 			<AnimatePresence>
 				{mobileMenuOpen && (
