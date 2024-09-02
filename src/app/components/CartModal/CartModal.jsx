@@ -32,6 +32,8 @@ const CartModal = ({ handleCartModal }) => {
 		}, 500);
 	};
 
+	console.log(cart);
+
 	return (
 		// overlay
 		<>
@@ -48,7 +50,9 @@ const CartModal = ({ handleCartModal }) => {
 			<div className="fixed left-0 right-0 top-[9rem] z-20 mx-6 mt-[4rem] flex min-h-[32rem] w-[90%] max-w-[37rem] flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] md:ml-auto md:mr-[4rem] md:w-full lg:mr-[16.5rem] lg:mt-[3.2rem]">
 				<div className="mb-[3.2rem] flex w-full flex-row items-center justify-between">
 					<h3 className="self-start text-[1.8rem] font-bold uppercase tracking-[0.12rem]">
-						Cart {`(${numOfProductsInCart})`}
+						Cart{' '}
+						{numOfProductsInCart !== 0 &&
+							`(${numOfProductsInCart})`}
 					</h3>
 					{numOfProductsInCart !== 0 && (
 						<p
@@ -101,6 +105,7 @@ const CartModal = ({ handleCartModal }) => {
 							<Link
 								href="/checkout"
 								className="w-full bg-primary-orange px-[5.5rem] py-[2rem] text-center text-[1.3rem] font-bold uppercase leading-[0.1rem] text-white"
+								onClick={handleCartModal}
 							>
 								Checkout
 							</Link>

@@ -61,16 +61,24 @@ const Header = () => {
 			<nav className="hidden w-[0] lg:flex lg:w-[45rem]">
 				<ul className="flex gap-[3.4rem]">
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						<Link href="/">home</Link>
+						<Link href="/" onClick={handleCartModal}>
+							home
+						</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						<Link href="/headphones">headphones</Link>
+						<Link href="/headphones" onClick={handleCartModal}>
+							headphones
+						</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						<Link href="/speakers">speakers</Link>
+						<Link href="/speakers" onClick={handleCartModal}>
+							speakers
+						</Link>
 					</li>
 					<li className="letter-spacing-[2px] cursor-pointer text-[1.3rem] uppercase tracking-[2px] text-white active:text-primary-orange">
-						<Link href="/earphones">earphones</Link>
+						<Link href="/earphones" onClick={handleCartModal}>
+							earphones
+						</Link>
 					</li>
 				</ul>
 			</nav>
