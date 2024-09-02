@@ -50,10 +50,15 @@ const CartModal = ({ handleCartModal, forceCloseCartModal }) => {
 				onClick={forceCloseCartModal}
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }}
+				exit={{ opacity: 0, transition: { delay: 0.2 } }}
 			></motion.div>
 			{/* cart modal */}
-			<div className="fixed left-0 right-0 top-[9rem] z-20 mx-6 mt-[4rem] flex min-h-[32rem] w-[90%] max-w-[37rem] flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] md:ml-auto md:mr-[4rem] md:w-full lg:mr-[16.5rem] lg:mt-[3.2rem]">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, transition: { delay: 0.2 } }}
+				exit={{ opacity: 0 }}
+				className="fixed left-0 right-0 top-[9rem] z-20 mx-6 mt-[4rem] flex min-h-[32rem] w-[90%] max-w-[37rem] flex-col items-center rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] md:ml-auto md:mr-[4rem] md:w-full lg:mr-[16.5rem] lg:mt-[3.2rem]"
+			>
 				<div className="mb-[3.2rem] flex w-full flex-row items-center justify-between">
 					<h3 className="self-start text-[1.8rem] font-bold uppercase tracking-[0.12rem]">
 						Cart{' '}
@@ -118,7 +123,7 @@ const CartModal = ({ handleCartModal, forceCloseCartModal }) => {
 						</motion.div>
 					)}
 				</AnimatePresence>
-			</div>
+			</motion.div>
 		</>
 	);
 };
