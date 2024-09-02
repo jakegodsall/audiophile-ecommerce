@@ -106,7 +106,10 @@ const Header = () => {
 					onClick={handleCartModal}
 				/>
 				{numberInCart > 0 && (
-					<p className="absolute right-[-1rem] top-[-1.2rem] rounded-full bg-primary-orange p-[.4rem] font-bold text-white">
+					<p
+						onClick={handleCartModal}
+						className="absolute right-[-1rem] top-[-1.2rem] cursor-pointer select-none rounded-full bg-primary-orange p-[.4rem] font-bold text-white"
+					>
 						{numberInCart}
 					</p>
 				)}

@@ -12,12 +12,15 @@ const CartItem = ({ product }) => {
 	const { cart, setCart } = useContext(CartContext);
 	const [quantity, setQuantity] = useState(product.quantity);
 
-
 	useEffect(() => {
 		setCart((prevState) => {
-			const newState = prevState.map((item) =>
-				item.id === product.id ? { ...item, quantity: quantity } : item,
-			);
+			const newState = prevState
+				.map((item) =>
+					item.id === product.id
+						? { ...item, quantity: quantity }
+						: item,
+				)
+				.filter((item) => item.quantity > 0); // Remove items with quantity 0
 			return newState;
 		});
 	}, [quantity]);
