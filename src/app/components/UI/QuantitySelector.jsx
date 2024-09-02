@@ -17,8 +17,8 @@ const QuantitySelector = ({ quantity, setQuantity, cart }) => {
 		<div
 			className={
 				cart
-					? 'flex gap-[2rem] bg-[#F1F1F1] px-[1.2rem] py-[0.7rem]'
-					: 'flex gap-[2.5rem] bg-[#F1F1F1] p-[1.5rem]'
+					? 'flex w-[10rem] justify-between bg-[#F1F1F1] px-[1.2rem] py-[0.7rem]'
+					: 'flex w-[12rem] justify-between gap-[2.5rem] bg-[#F1F1F1] p-[1.5rem]'
 			}
 		>
 			<button
