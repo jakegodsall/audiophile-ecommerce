@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import ProductNavigationBar from '../ProductNavigation/ProductNavigationBar';
 
 const MobileMenu = ({ closeMenu }) => {
@@ -6,14 +8,18 @@ const MobileMenu = ({ closeMenu }) => {
 	};
 
 	return (
-		<div
-			className="absolute bottom-[9rem] left-0 right-0 top-[9rem] z-20 h-full bg-black/40"
+		<motion.div
+			initial={{ y: -1000 }}
+			animate={{ y: 20 }}
+			exit={{ y: -1000 }}
+			transition={{ duration: 1 }}
+			className="absolute bottom-0 left-0 right-0 top-[-2rem] z-20 h-full bg-black/40"
 			onClick={closeMobileMenu}
 		>
 			<div className="fixed left-0 top-[9rem] w-full">
 				<ProductNavigationBar />
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

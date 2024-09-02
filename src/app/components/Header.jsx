@@ -42,7 +42,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className="fixed z-10 flex w-full max-w-[144rem] items-center justify-between border-b-[1px] border-white/10 bg-black px-[2.4rem] py-[3.2rem] sm:px-[4rem] sm:py-[4rem] lg:justify-between">
+		<header className="fixed z-30 flex w-full max-w-[144rem] items-center justify-between border-b-[1px] border-white/10 bg-black px-[2.4rem] py-[3.2rem] sm:px-[4rem] sm:py-[4rem] lg:justify-between">
 			<div className="lg:hidden">
 				<Hamburger
 					isActive={mobileMenuOpen}
@@ -87,7 +87,11 @@ const Header = () => {
 					</p>
 				)}
 			</div>
-			{mobileMenuOpen && <MobileMenu closeMenu={closeMenuFromModal} />}
+			<AnimatePresence>
+				{mobileMenuOpen && (
+					<MobileMenu closeMenu={closeMenuFromModal} />
+				)}
+			</AnimatePresence>
 			<AnimatePresence>
 				{cartModalOpen && (
 					<CartModal handleCartModal={handleCartModal} />
