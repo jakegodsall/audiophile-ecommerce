@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,16 +20,16 @@ const Footer = () => {
 					/>
 					<nav>
 						<ul className="flex flex-col gap-[1.6rem] sm:flex-row">
-							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
+							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 hover:text-primary-orange active:text-primary-orange">
 								<Link href="/">home</Link>
 							</li>
-							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
+							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 hover:text-primary-orange active:text-primary-orange">
 								<Link href="/headphones">headphones</Link>
 							</li>
-							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
+							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 hover:text-primary-orange active:text-primary-orange">
 								<Link href="/speakers">speakers</Link>
 							</li>
-							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 active:text-primary-orange">
+							<li className="letter-spacing-[2px] cursor-pointer text-center text-[1.3rem] uppercase tracking-[2px] text-white transition-all duration-200 hover:text-primary-orange active:text-primary-orange">
 								<Link href="/earphones">earphones</Link>
 							</li>
 						</ul>
@@ -44,13 +46,14 @@ const Footer = () => {
 
 				<div className="flex flex-col items-center gap-[4.8rem] sm:w-full sm:flex-row sm:justify-between">
 					<p className="text-center text-[1.5rem] tracking-[.2px] text-white/50 sm:text-left">
-						Copyright 2021. All Rights Reserved
+						Copyright {new Date().getFullYear()}. All Rights
+						Reserved
 					</p>
 					<ul className="flex gap-[2rem] lg:relative lg:top-[-6rem]">
 						<li>
 							<a href="#/">
 								<svg
-									className="fill-current text-white transition-all duration-200 active:text-primary-orange"
+									className="fill-current text-white transition-all duration-200 hover:text-primary-orange active:text-primary-orange"
 									width="24"
 									height="24"
 									xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +65,7 @@ const Footer = () => {
 						<li>
 							<a href="#/">
 								<svg
-									className="fill-current text-white transition-all duration-200 active:text-primary-orange"
+									className="fill-current text-white transition-all duration-200  hover:text-primary-orange active:text-primary-orange"
 									width="24"
 									height="20"
 									xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +73,6 @@ const Footer = () => {
 									<path
 										d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"
 										fillRule="nonzero"
-										// fill="#FFF"
 									/>
 								</svg>
 							</a>
@@ -78,7 +80,7 @@ const Footer = () => {
 						<li>
 							<a href="#">
 								<svg
-									className="fill-current text-white transition-all duration-200 active:text-primary-orange"
+									className="fill-current text-white transition-all duration-200 hover:text-primary-orange active:text-primary-orange"
 									width="24"
 									height="24"
 									xmlns="http://www.w3.org/2000/svg"
