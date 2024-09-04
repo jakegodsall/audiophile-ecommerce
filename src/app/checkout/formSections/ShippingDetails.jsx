@@ -18,7 +18,7 @@ const ShippingDetails = ({ onChangeHandler }) => {
 					placeholder="1137 Williams Avenue"
 					id="address"
 					name="address"
-					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline-none"
+					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange"
 					onChange={(e) => {
 						onChangeHandler(e, 'shipping');
 					}}
@@ -36,7 +36,7 @@ const ShippingDetails = ({ onChangeHandler }) => {
 					placeholder="10001"
 					id="zip"
 					name="zip"
-					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline-none"
+					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange"
 					onChange={(e) => {
 						onChangeHandler(e, 'shipping');
 					}}
@@ -54,7 +54,7 @@ const ShippingDetails = ({ onChangeHandler }) => {
 					placeholder="New York"
 					id="city"
 					name="city"
-					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold tracking-[-0.025rem] focus:outline-none"
+					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold tracking-[-0.025rem] focus:outline focus:outline-primary-orange"
 					onChange={(e) => {
 						onChangeHandler(e, 'shipping');
 					}}
@@ -71,7 +71,7 @@ const ShippingDetails = ({ onChangeHandler }) => {
 					type="text"
 					placeholder="United States"
 					id="country"
-					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline-none"
+					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange"
 					onChange={(e) => {
 						onChangeHandler(e, 'shipping');
 					}}

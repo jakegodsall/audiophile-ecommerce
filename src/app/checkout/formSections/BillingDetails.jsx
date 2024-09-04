@@ -18,7 +18,7 @@ const BillingDetails = ({ onChangeHandler }) => {
 					placeholder="Alexei Ward"
 					id="name"
 					name="name"
-					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline-none"
+					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange"
 					onChange={(e) => onChangeHandler(e, 'billing')}
 				/>
 			</div>
@@ -34,7 +34,7 @@ const BillingDetails = ({ onChangeHandler }) => {
 					placeholder="alexei@mail.com"
 					id="email"
 					name="email"
-					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline-none"
+					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange"
 					onChange={(e) => onChangeHandler(e, 'billing')}
 				/>
 			</div>
@@ -50,7 +50,7 @@ const BillingDetails = ({ onChangeHandler }) => {
 					placeholder="+1 202-555-0136"
 					id="phone"
 					name="phone"
-					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline-none"
+					className="rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange"
 					onChange={(e) => onChangeHandler(e, 'billing')}
 				/>
 			</div>
