@@ -1,10 +1,14 @@
 import React from 'react';
+import clsx from 'clsx';
 
 const RadioControl = ({ selected, value, handleOptionChange }) => {
 	return (
 		<label
 			htmlFor={value}
-			className="flex w-full gap-[1.6rem] rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[1.6rem] py-[1.8rem] text-[1.4rem] font-bold tracking-[-0.025rem] peer-focus:ring-2 peer-focus:ring-primary-orange"
+			className={clsx(
+				'flex w-full gap-[1.6rem] rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[1.6rem] py-[1.8rem] text-[1.4rem] font-bold tracking-[-0.025rem]',
+				selected && 'outline outline-1 outline-primary-orange',
+			)}
 			onClick={handleOptionChange}
 		>
 			<input
