@@ -4,6 +4,7 @@
 	--color-primary-black: #101010;
 	--color-primary-grey: #fafafa;
 	--color-secondary-grey: #f1f1f1;
+	--error: #f00;
 }
 
 html {

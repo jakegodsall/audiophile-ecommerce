@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import FormValidator from '../utilities/formValidator';
 
@@ -28,6 +28,20 @@ const CheckoutForm = () => {
 			method: 'e-money',
 		},
 	});
+
+	const [errors, setErrors] = useState({
+		billing: {
+			name: '',
+			email: '',
+			phone: '',
+		},
+		shipping: {
+			address: '',
+			zip: '',
+			city: '',
+			country: '',
+		},
+	}); // object of validation errors
 
 	const onChangeHandler = (e, section) => {
 		// extract inputs
@@ -62,8 +76,66 @@ const CheckoutForm = () => {
 		});
 	};
 
+	const validateForm = () => {
+		let errors = {
+			billing: {
+				name: '',
+				email: '',
+				phone: '',
+			},
+			shipping: {
+				address: '',
+				zip: '',
+				city: '',
+				country: '',
+			},
+		};
+
+		// Billing validation
+		if (!FormValidator.validateTextInput(formData.billing.name)) {
+			errors.billing.name = 'Name is required.';
+		}
+		if (!FormValidator.validateEmail(formData.billing.email)) {
+			errors.billing.email = 'Invalid email.';
+		}
+		if (!FormValidator.validatePhoneNumber(formData.billing.phone)) {
+			errors.billing.phone = 'Invalid phone number.';
+		}
+
+		// Shipping validation
+		if (!FormValidator.validateTextInput(formData.shipping.address)) {
+			errors.shipping.address = 'Address is required.';
+		}
+		if (!FormValidator.validateZipCode(formData.shipping.zip)) {
+			errors.shipping.zip = 'Invalid zip code.';
+		}
+		if (!FormValidator.validateTextInput(formData.shipping.city)) {
+			errors.shipping.city = 'City is required.';
+		}
+		if (!FormValidator.validateTextInput(formData.shipping.country)) {
+			errors.shipping.country = 'Country is required.';
+		}
+
+		return errors;
+	};
+
 	const onSubmitHandler = (e) => {
 		e.preventDefault();
+
+		// Validate the form data
+		const validationErrors = validateForm();
+
+		if (Object.keys(validationErrors).length > 0) {
+			// If there are validation errors, set them in the state and prevent form submission
+			setErrors(validationErrors);
+			return;
+		}
+
+		// Submit form data
+		console.log('Form data submitted:', formData);
+
+		// Clear errors after successful submission
+		setErrors({});
 	};
 
 	return (
@@ -75,8 +147,14 @@ const CheckoutForm = () => {
 				<h1 className="mb-[3.2rem] text-[2.8rem] font-bold uppercase tracking-[0.1rem]">
 					Checkout
 				</h1>
-				<BillingDetails onChangeHandler={onChangeHandler} />
-				<ShippingDetails onChangeHandler={onChangeHandler} />
+				<BillingDetails
+					onChangeHandler={onChangeHandler}
+					errors={errors.billing}
+				/>
+				<ShippingDetails
+					onChangeHandler={onChangeHandler}
+					errors={errors.shipping}
+				/>
 				<PaymentDetails
 					onRadioHandler={onRadioHandler}
 					radioValue={formData.payment.method}

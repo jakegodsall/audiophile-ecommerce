@@ -18,6 +18,7 @@ module.exports = {
 				'primary-black': 'var(--color-primary-black)',
 				'primary-grey': 'var(--color-primary-grey)',
 				'secondary-grey': 'var(--color-secondary-grey)',
+				error: 'var(--error)',
 			},
 		},
 	},
