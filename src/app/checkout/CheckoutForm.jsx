@@ -1,6 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+
+import FormValidator from '../utilities/formValidator';
+
 import BillingDetails from './formSections/BillingDetails';
 import ShippingDetails from './formSections/ShippingDetails';
 import PaymentDetails from './formSections/PaymentDetails';
