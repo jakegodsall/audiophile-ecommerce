@@ -44,10 +44,7 @@ const CartModal = ({ handleCartModal, forceCloseCartModal }) => {
 		const productArray = getSelectedProducts(cart, products);
 		const total = getTotalPrice(productArray);
 		setTotalPrice(total);
-		console.log('IS CHANGING');
 	});
-
-	console.log(cart);
 
 	return (
 		// overlay

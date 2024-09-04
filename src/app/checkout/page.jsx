@@ -11,7 +11,7 @@ const CheckoutPage = () => {
 	};
 
 	return (
-		<div className="bg-[#FAFAFA] px-[2.4rem]">
+		<div className="mt-[9rem] bg-[#FAFAFA] px-[2.4rem] pt-[1.6rem]">
 			<p
 				className="mb-[2.4rem] mt-[1.6rem] cursor-pointer self-start text-[1.5rem] font-medium capitalize text-black/50 sm:mt-[3.3rem] lg:mb-[5.6rem] lg:mt-[7.9rem]"
 				onClick={goBackHandler}

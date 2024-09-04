@@ -2,7 +2,7 @@ import React from 'react';
 
 const EMoneyDetails = () => {
 	return (
-		<fieldset className="mb-[3.2rem] flex flex-col sm:flex-row sm:gap-x-[1.6rem]">
+		<fieldset className="flex flex-col sm:flex-row sm:gap-x-[1.6rem]">
 			<div className="mb-[2.4rem] flex flex-col sm:flex-1">
 				<label
 					htmlFor="e-money-number"
