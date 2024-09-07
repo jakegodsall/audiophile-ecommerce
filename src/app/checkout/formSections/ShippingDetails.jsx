@@ -99,6 +99,7 @@ const ShippingDetails = ({ onChangeHandler, errors }) => {
 					type="text"
 					placeholder="United States"
 					id="country"
+					name="country"
 					className={clsx(
 						'rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange',
 						errors.country && 'outline outline-1 outline-error',
