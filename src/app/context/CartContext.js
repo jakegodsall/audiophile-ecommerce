@@ -6,18 +6,20 @@ const CartContext = createContext();
 
 // Represents the selected products in the user's cart
 const CartProvider = ({ children }) => {
-	// Load cart from localStorage or initialize with an empty array
-	const [cart, setCart] = useState(() => {
-		if (typeof window !== 'undefined') {
-			const savedCart = localStorage.getItem('cart');
-			return savedCart ? JSON.parse(savedCart) : [];
+	const [cart, setCart] = useState([]); // Initialize with an empty array to prevent mismatches
+
+	// Load cart from localStorage after the component has mounted
+	useEffect(() => {
+		const savedCart = localStorage.getItem('cart');
+		if (savedCart) {
+			setCart(JSON.parse(savedCart));
 		}
-		return [];
-	});
+	}, []);
 
 	// Update localStorage whenever cart changes
 	useEffect(() => {
 		if (cart.length > 0) {
+			// Update localStorage only if cart has items
 			localStorage.setItem('cart', JSON.stringify(cart));
 		}
 	}, [cart]);
