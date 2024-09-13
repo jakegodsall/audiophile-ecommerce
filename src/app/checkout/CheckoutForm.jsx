@@ -44,20 +44,25 @@ const CheckoutForm = () => {
 	}); // object of validation errors
 
 	const onChangeHandler = (e, section) => {
-		// extract inputs
 		const input = e.target.name;
 		const value = e.target.value;
 
-		// create new section based on changed input
-		let newSection = { ...formData[section] };
-		newSection = { ...newSection, [input]: value };
-
-		// set the new state including the new section
 		setFormData((prevState) => {
-			return {
-				...prevState,
-				[section]: newSection,
-			};
+			const currentSection = prevState[section];
+
+			// Only update if the value has changed to avoid unnecessary state updates
+			if (currentSection[input] !== value) {
+				return {
+					...prevState,
+					[section]: {
+						...currentSection,
+						[input]: value,
+					},
+				};
+			}
+
+			// If the value hasn't changed, return the previous state
+			return prevState;
 		});
 	};
 
@@ -119,23 +124,43 @@ const CheckoutForm = () => {
 		return errors;
 	};
 
+	const hasValidationErrors = (errors) => {
+		// Check each field in the object for non-empty strings
+		return Object.keys(errors).some((section) =>
+			Object.values(errors[section]).some((error) => error.trim() !== ''),
+		);
+	};
+
 	const onSubmitHandler = (e) => {
 		e.preventDefault();
 
 		// Validate the form data
 		const validationErrors = validateForm();
+		console.log('Validation errors:', validationErrors); // Check if there are validation errors
 
-		if (Object.keys(validationErrors).length > 0) {
+		if (hasValidationErrors(validationErrors)) {
 			// If there are validation errors, set them in the state and prevent form submission
 			setErrors(validationErrors);
 			return;
 		}
 
 		// Submit form data
-		console.log('Form data submitted:', formData);
+		console.log('Form data submitted:', formData); // No need for a `const` here unless you're assigning something
 
 		// Clear errors after successful submission
-		setErrors({});
+		setErrors({
+			billing: {
+				name: '',
+				email: '',
+				phone: '',
+			},
+			shipping: {
+				address: '',
+				zip: '',
+				city: '',
+				country: '',
+			},
+		});
 	};
 
 	return (

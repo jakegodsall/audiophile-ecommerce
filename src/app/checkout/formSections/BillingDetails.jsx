@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 const BillingDetails = ({ onChangeHandler, errors }) => {
+	console.log('errors', errors);
 	return (
 		<fieldset className="mb-[3.2rem] sm:flex sm:flex-wrap">
 			<legend className="mb-[1.6rem] text-[1.3rem] font-medium uppercase tracking-[0.1rem] text-primary-orange">
@@ -26,7 +27,9 @@ const BillingDetails = ({ onChangeHandler, errors }) => {
 						'rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange',
 						errors.name && 'outline outline-1 outline-error',
 					)}
-					onChange={(e) => onChangeHandler(e, 'billing')}
+					onChange={(e) => {
+						onChangeHandler(e, 'billing');
+					}}
 				/>
 			</div>
 			<div className="mb-[2.4rem] flex flex-col sm:flex-1">
@@ -50,7 +53,9 @@ const BillingDetails = ({ onChangeHandler, errors }) => {
 						'rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange',
 						errors.email && 'outline outline-1 outline-error',
 					)}
-					onChange={(e) => onChangeHandler(e, 'billing')}
+					onChange={(e) => {
+						onChangeHandler(e, 'billing');
+					}}
 				/>
 			</div>
 			<div className="mb-[2.4rem] flex flex-col sm:w-[calc(50%-0.8rem)]">
@@ -74,7 +79,9 @@ const BillingDetails = ({ onChangeHandler, errors }) => {
 						'rounded-[0.8rem] border-[0.1rem] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] tracking-[-0.025rem] focus:outline focus:outline-primary-orange',
 						errors.phone && 'outline outline-1 outline-error',
 					)}
-					onChange={(e) => onChangeHandler(e, 'billing')}
+					onChange={(e) => {
+						onChangeHandler(e, 'billing');
+					}}
 				/>
 			</div>
 		</fieldset>

@@ -2,8 +2,6 @@ import React from 'react';
 import clsx from 'clsx';
 
 const ShippingDetails = ({ onChangeHandler, errors }) => {
-	console.log(errors);
-
 	return (
 		<fieldset className="mb-[3.2rem] flex flex-col sm:flex-row sm:flex-wrap">
 			<legend className="mb-[1.6rem] text-[1.3rem] font-medium uppercase tracking-[0.1rem] text-primary-orange">
