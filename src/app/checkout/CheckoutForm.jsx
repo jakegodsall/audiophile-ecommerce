@@ -11,6 +11,8 @@ import EMoneyDetails from './formSections/EMoneyDetails';
 import SummaryDetails from './formSections/SummarySection/SummaryDetails';
 import CashOnDeliveryText from './formSections/CashOnDeliveryText';
 
+import ThankYouModal from '../components/ThankYouModal/ThankYouModal';
+
 const CheckoutForm = () => {
 	const [formData, setFormData] = useState({
 		billing: {
@@ -164,35 +166,38 @@ const CheckoutForm = () => {
 	};
 
 	return (
-		<form
-			onSubmit={onSubmitHandler}
-			className="flex w-full flex-col items-center rounded-[0.8rem] pb-[9.7rem] sm:pb-[11.6rem] lg:flex-row lg:gap-x-[3rem] lg:pb-[14.1rem]"
-		>
-			<div className="mb-[3.2rem] w-full bg-white p-[2.4rem]">
-				<h1 className="mb-[3.2rem] text-[2.8rem] font-bold uppercase tracking-[0.1rem]">
-					Checkout
-				</h1>
-				<BillingDetails
-					onChangeHandler={onChangeHandler}
-					errors={errors.billing}
-				/>
-				<ShippingDetails
-					onChangeHandler={onChangeHandler}
-					errors={errors.shipping}
-				/>
-				<PaymentDetails
-					onRadioHandler={onRadioHandler}
-					radioValue={formData.payment.method}
-				/>
-				{formData.payment.method == 'cash-on-delivery' && (
-					<CashOnDeliveryText />
-				)}
-				{formData.payment.method == 'e-money' && <EMoneyDetails />}
-			</div>
-			<div className="w-full lg:max-w-[40%] lg:self-start">
-				<SummaryDetails />
-			</div>
-		</form>
+		<>
+			<form
+				onSubmit={onSubmitHandler}
+				className="flex w-full flex-col items-center rounded-[0.8rem] pb-[9.7rem] sm:pb-[11.6rem] lg:flex-row lg:gap-x-[3rem] lg:pb-[14.1rem]"
+			>
+				<div className="mb-[3.2rem] w-full bg-white p-[2.4rem]">
+					<h1 className="mb-[3.2rem] text-[2.8rem] font-bold uppercase tracking-[0.1rem]">
+						Checkout
+					</h1>
+					<BillingDetails
+						onChangeHandler={onChangeHandler}
+						errors={errors.billing}
+					/>
+					<ShippingDetails
+						onChangeHandler={onChangeHandler}
+						errors={errors.shipping}
+					/>
+					<PaymentDetails
+						onRadioHandler={onRadioHandler}
+						radioValue={formData.payment.method}
+					/>
+					{formData.payment.method == 'cash-on-delivery' && (
+						<CashOnDeliveryText />
+					)}
+					{formData.payment.method == 'e-money' && <EMoneyDetails />}
+				</div>
+				<div className="w-full lg:max-w-[40%] lg:self-start">
+					<SummaryDetails />
+				</div>
+			</form>
+			<ThankYouModal />
+		</>
 	);
 };
 
