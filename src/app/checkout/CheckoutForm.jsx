@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import FormValidator from '../utilities/formValidator';
+import { CartContext } from '../context/CartContext';
 
 import BillingDetails from './formSections/BillingDetails';
 import ShippingDetails from './formSections/ShippingDetails';
@@ -14,6 +15,8 @@ import CashOnDeliveryText from './formSections/CashOnDeliveryText';
 import ThankYouModal from '../components/ThankYouModal/ThankYouModal';
 
 const CheckoutForm = () => {
+	const { cart, setCart } = useContext(CartContext);
+
 	const [formData, setFormData] = useState({
 		billing: {
 			name: '',
@@ -44,6 +47,8 @@ const CheckoutForm = () => {
 			country: '',
 		},
 	}); // object of validation errors
+
+	const [thankYouModalOpen, setThankYouModalOpen] = useState(false);
 
 	const onChangeHandler = (e, section) => {
 		const input = e.target.name;
@@ -149,6 +154,11 @@ const CheckoutForm = () => {
 		// Submit form data
 		console.log('Form data submitted:', formData); // No need for a `const` here unless you're assigning something
 
+		// open the thank you modal
+		setThankYouModalOpen(true);
+		// empty the cart
+		setCart([]);
+
 		// Clear errors after successful submission
 		setErrors({
 			billing: {
@@ -196,7 +206,7 @@ const CheckoutForm = () => {
 					<SummaryDetails />
 				</div>
 			</form>
-			<ThankYouModal />
+			{thankYouModalOpen && <ThankYouModal />}
 		</>
 	);
 };
